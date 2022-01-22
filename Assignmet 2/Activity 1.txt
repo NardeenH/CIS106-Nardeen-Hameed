@@ -1,0 +1,6 @@
+Function Main
+    Declare String name
+    
+    Assign name = " World program "
+    Output " Hello" & name
+End
