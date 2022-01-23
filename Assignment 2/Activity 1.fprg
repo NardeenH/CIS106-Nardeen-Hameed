@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="narde"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-23 02:27:57 PM"/>
+        <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjI7MTA6NDk6NDQgQU07Mjg2Nw=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjM7MDI6Mjc6NTcgUE07MzsyOTk0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Hi,&#13;&#10;It's the first time I used a flowchart."/>
+            <declare name="name" type="String" array="False" size=""/>
+            <assign variable="name" expression="&quot; world program&quot;"/>
+            <output expression="&quot; Hello &quot; &amp; name" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
