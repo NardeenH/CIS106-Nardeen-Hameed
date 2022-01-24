@@ -1,6 +1,4 @@
 Function Main
-    ... Hi, 
-    ... It's the first time I used a flowchart.
     Declare String name
     
     Assign name = " Nardeen"
