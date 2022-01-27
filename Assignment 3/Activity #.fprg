@@ -1,1 +1,36 @@
-
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="narde"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-26 06:52:11 PM"/>
+        <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjY7MDU6MTM6MTcgUE07Mjg4MQ=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjY7MDY6NTI6MTEgUE07MTsyOTg3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <declare name="month" type="Integer" array="False" size=""/>
+            <declare name="day" type="Integer" array="False" size=""/>
+            <output expression="&quot;age&quot;" newline="True"/>
+            <input variable="age"/>
+            <output expression="&quot; Month &quot;" newline="True"/>
+            <input variable="month"/>
+            <output expression="&quot; Day &quot;" newline="True"/>
+            <input variable="day"/>
+            <declare name="ages" type="Integer" array="False" size=""/>
+            <declare name="days" type="Integer" array="False" size=""/>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <declare name="minutes" type="Integer" array="False" size=""/>
+            <assign variable="ages" expression="2022-age"/>
+            <assign variable="days" expression="(ages*365)+(month*30)+day"/>
+            <assign variable="hours" expression="days*24"/>
+            <assign variable="minutes" expression="hours*60"/>
+            <output expression="&quot; Days&quot; &amp; days" newline="True"/>
+            <output expression="&quot; Hours &quot; &amp; hours" newline="True"/>
+            <output expression="&quot; minutes&quot;&amp; minutes" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
