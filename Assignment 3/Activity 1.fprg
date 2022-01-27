@@ -1,1 +1,34 @@
-
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="narde"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-27 02:24:01 PM"/>
+        <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjY7MDk6NTc6MzcgUE07Mjg5NQ=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjc7MDI6MjQ6MDEgUE07NjsyOTg3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Create a program to prompt the user for hours and rate per hour and then calculate and display their weekly, monthly, and annual gross pay (hours * rate). Base monthly and annual calculations on 12 months per year and 52 weeks per year.[1]&#13;&#10;I got some help from Tim.&#13;&#10;&#13;&#10;"/>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <declare name="rate" type="Integer" array="False" size=""/>
+            <declare name="daily" type="Integer" array="False" size=""/>
+            <declare name="weekly" type="Integer" array="False" size=""/>
+            <declare name="monthly" type="Integer" array="False" size=""/>
+            <declare name="annualy" type="Integer" array="False" size=""/>
+            <output expression="&quot; how many hours did you work&quot;" newline="True"/>
+            <input variable="Hours"/>
+            <output expression="&quot; what is your rate foy pay &quot;" newline="True"/>
+            <input variable="Rate"/>
+            <assign variable="daily" expression="hours*rate"/>
+            <assign variable="weekly" expression="daily*7"/>
+            <assign variable="monthly" expression="daily*30"/>
+            <assign variable="annualy" expression="weekly*52"/>
+            <output expression="&quot;Salary in Weekly &quot; &amp; weekly" newline="True"/>
+            <output expression="&quot;Salary in Monthlu &quot; &amp; monthly" newline="True"/>
+            <output expression="&quot;Salary in Annualy &quot; &amp; annualy" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
