@@ -7,8 +7,7 @@ rate = int(input())
 daily = hours * rate
 weekly = daily * 7
 monthly = daily * 30
-annualy = weekly * 52
+yearly = weekly * 52
 print("Salary in Weekly: " + str(weekly))
 print("Salary in Monthlu: " + str(monthly))
-print("Salary in Annualy: " + str(annualy))
-
+print("Salary in Yearly: " + str(yearly))
