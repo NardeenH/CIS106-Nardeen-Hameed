@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-01-28 07:22:35 PM"/>
+        <attribute name="saved" value="2022-01-29 01:28:42 AM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjY7MDk6NTc6MzcgUE07Mjg5NQ=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjg7MDc6MjI6MzUgUE07MTE7MzA0Mg=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjk7MDE6Mjg6NDIgQU07MTI7MzAyNw=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -18,9 +18,9 @@
             <declare name="weekly" type="Integer" array="False" size=""/>
             <declare name="monthly" type="Integer" array="False" size=""/>
             <declare name="yearly" type="Integer" array="False" size=""/>
-            <output expression="&quot; How many Weekly hours did you work &quot;" newline="True"/>
-            <input variable="Hour"/>
-            <output expression="&quot; What is your rate foy pay &quot;" newline="True"/>
+            <output expression="&quot; How many weekly hours did you work ?&quot;" newline="True"/>
+            <input variable="Hours"/>
+            <output expression="&quot; What is your rate foy pay ?&quot;" newline="True"/>
             <input variable="Rate"/>
             <assign variable="daily" expression="hours*rate"/>
             <assign variable="weekly" expression="daily*7"/>
