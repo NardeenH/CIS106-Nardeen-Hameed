@@ -4,5 +4,6 @@ lenght = float(input())
 print(" What is the width of rectangular in feet ?")
 width = float(input())
 area = lenght * width
+print(" area = " + str(area) + " feet ")
 yard = area / 9
-print(str(yard) + "  Square yard")
+print(" area = " + str(yard) + " square yard ")

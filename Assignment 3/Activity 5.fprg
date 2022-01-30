@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-01-29 10:59:09 PM"/>
+        <attribute name="saved" value="2022-01-29 11:13:54 PM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjg7MDk6MDU6MjcgQU07Mjg3NA=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjk7MTA6NTk6MDkgUE07ODszMDA2"/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjk7MTE6MTM6NTQgUE07MTA7MzAzOA=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -21,8 +21,9 @@
             <output expression="&quot; What is the width of rectangular in feet ?&quot;" newline="True"/>
             <input variable="Width"/>
             <assign variable="area" expression="Lenght*Width"/>
+            <output expression="&quot; area = &quot; &amp; area &amp;&quot; feet &quot;" newline="True"/>
             <assign variable="yard" expression="area/9"/>
-            <output expression="yard&amp; &quot;  Square yard&quot;" newline="True"/>
+            <output expression="&quot; area = &quot; &amp; yard &amp; &quot; square yard &quot;" newline="True"/>
         </body>
     </function>
 </flowgorithm>
