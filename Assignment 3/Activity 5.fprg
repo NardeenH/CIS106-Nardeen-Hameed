@@ -4,24 +4,24 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-01-29 10:48:13 AM"/>
+        <attribute name="saved" value="2022-01-29 10:59:09 PM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjg7MDk6MDU6MjcgQU07Mjg3NA=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjk7MTA6NDg6MTMgQU07NzsyOTgz"/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjk7MTA6NTk6MDkgUE07ODszMDA2"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="Create a program that calculates the area of a room to determine the amount of floor covering required. The room is rectangular with the dimensions measured in feet with decimal fractions. The output needs to be in square yards. There are 3 linear feet (9 square feet) to a yard."/>
             <declare name="area" type="Real" array="False" size=""/>
-            <declare name="L" type="Real" array="False" size=""/>
-            <declare name="W" type="Real" array="False" size=""/>
+            <declare name="Lenght" type="Real" array="False" size=""/>
+            <declare name="Width" type="Real" array="False" size=""/>
             <declare name="yard" type="Real" array="False" size=""/>
-            <output expression="&quot; what is the lenght of rectangular in feet &quot;" newline="True"/>
-            <input variable="L"/>
-            <output expression="&quot; What is the width of rectangular in feet &quot;" newline="True"/>
-            <input variable="W"/>
-            <assign variable="area" expression="L*W"/>
-            <assign variable="yeard" expression="area/9"/>
+            <output expression="&quot; what is the lenght of rectangular in feet ?&quot;" newline="True"/>
+            <input variable="Lenght"/>
+            <output expression="&quot; What is the width of rectangular in feet ?&quot;" newline="True"/>
+            <input variable="Width"/>
+            <assign variable="area" expression="Lenght*Width"/>
+            <assign variable="yard" expression="area/9"/>
             <output expression="yard&amp; &quot;  Square yard&quot;" newline="True"/>
         </body>
     </function>
