@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="narde"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-01-30 12:11:56 AM"/>
+        <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjk7MTE6MjE6NDQgUE07Mjg4MA=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMzA7MTI6MTE6NTYgQU07MTsyOTY4"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="age" type="Real" array="False" size=""/>
+            <declare name="years" type="Real" array="False" size=""/>
+            <declare name="month" type="Real" array="False" size=""/>
+            <declare name="days" type="Real" array="False" size=""/>
+            <declare name="hours" type="Real" array="False" size=""/>
+            <declare name="second" type="Real" array="False" size=""/>
+            <output expression="&quot; How old are you ?&quot;" newline="True"/>
+            <input variable="age"/>
+            <assign variable="month" expression="age*12"/>
+            <assign variable="days" expression="age*12*365"/>
+            <assign variable="hours" expression="(age*12*365+age/4)*24"/>
+            <assign variable="second" expression="(age*12*365+age/4)*24*60*60"/>
+            <output expression="&quot; age in month= &quot; &amp; month" newline="True"/>
+            <output expression="&quot; age in days= &quot; &amp; days" newline="True"/>
+            <output expression="&quot; age in hours = &quot; &amp; hours" newline="True"/>
+            <output expression="&quot; age in second = &quot; &amp; second" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
