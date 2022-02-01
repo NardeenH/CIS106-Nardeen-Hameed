@@ -2,7 +2,7 @@
 # 
 # I enjoy using flowchart.
 print(" How old are you ?")
-age = float(input())
+age = int(input())
 month = age * 12
 days = age * 12 * 365
 hours = (age * 12 * 365 + age / 4) * 24
