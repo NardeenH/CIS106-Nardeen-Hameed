@@ -6,9 +6,9 @@ width = int(input())
 print(" what is the hight of the room?")
 height = int(input())
 print("what is the price per gallon? ")
-price = float(input())
+price = int(input())
 print(" how many square feet a gallon need ? ")
-gallon = float(input())
+gallon = int(input())
 area = 2 * length * height + 2 * width * height
 gallon = area / gallon + 0.999
 price = gallon * price

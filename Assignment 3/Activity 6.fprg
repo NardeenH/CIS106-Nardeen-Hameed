@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-01-31 09:32:20 PM"/>
+        <attribute name="saved" value="2022-01-31 09:48:01 PM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMzE7MDg6NTk6NDEgUE07Mjg4Nw=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMzE7MDk6MzI6MjAgUE07MTsyOTg0"/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMzE7MDk6NDg6MDEgUE07MjsyOTkx"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -15,8 +15,8 @@
             <declare name="length" type="Integer" array="False" size=""/>
             <declare name="width" type="Integer" array="False" size=""/>
             <declare name="height" type="Integer" array="False" size=""/>
-            <declare name="price" type="Real" array="False" size=""/>
-            <declare name="gallon" type="Real" array="False" size=""/>
+            <declare name="price" type="Integer" array="False" size=""/>
+            <declare name="gallon" type="Integer" array="False" size=""/>
             <declare name="area" type="Integer" array="False" size=""/>
             <output expression="&quot;What is the length of the room?&quot;" newline="True"/>
             <input variable="length"/>
