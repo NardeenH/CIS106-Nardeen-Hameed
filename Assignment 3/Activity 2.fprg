@@ -4,20 +4,20 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-01-30 12:01:50 PM"/>
+        <attribute name="saved" value="2022-01-31 09:35:33 PM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjk7MTE6MjE6NDQgUE07Mjg4MA=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMzA7MTI6MDE6NTAgUE07MzsyOTc4"/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMzE7MDk6MzU6MzMgUE07NDsyOTk0"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="Create a program that asks the user how old they are in years, and then calculate and display their approximate age in months, days, hours, and seconds. For example, a person 1-year-old is 12 months old, 365 days old, etc.&#13;&#10;&#13;&#10;I enjoy using flowchart."/>
-            <declare name="age" type="Real" array="False" size=""/>
-            <declare name="years" type="Real" array="False" size=""/>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <declare name="years" type="Integer" array="False" size=""/>
             <declare name="month" type="Real" array="False" size=""/>
-            <declare name="days" type="Real" array="False" size=""/>
-            <declare name="hours" type="Real" array="False" size=""/>
-            <declare name="seconds" type="Real" array="False" size=""/>
+            <declare name="days" type="Integer" array="False" size=""/>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <declare name="seconds" type="Integer" array="False" size=""/>
             <output expression="&quot; How old are you ?&quot;" newline="True"/>
             <input variable="age"/>
             <assign variable="month" expression="age*12"/>
