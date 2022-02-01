@@ -2,10 +2,9 @@
 print(" How old are you ? ")
 age = int(input())
 months = age * 12
-days = age * 12 * 365 + float(age) / 4
-hours = (age * 12 * 365 + float(age) / 4) * 24
-minutes = (age * 365 + float(age) / 4) * 24 * 60
-seconds = (age * 365 + float(age) / 4) * 24 * 60 * 60
+days = age * 365
+hours = 365 * 24 * age
+seconds = 60 * 60 * 24 * 365 * age
 print(" Person age in months" + str(months))
 print(" Person age in days = " + str(days))
 print(" Person age in hours = " + str(hours))

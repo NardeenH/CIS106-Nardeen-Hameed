@@ -4,14 +4,15 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-01-31 10:48:47 PM"/>
+        <attribute name="saved" value="2022-01-31 11:30:43 PM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMzE7MTA6Mjg6MTYgUE07Mjg3OA=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMzE7MTA6NDg6NDcgUE07MzsyOTk0"/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMzE7MTE6MzA6NDMgUE07NDsyOTgz"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="Create a program that asks the user how old they are in years, and then calculate and display their approximate age in months, days, hours, and seconds. For example, a person 1-year-old is 12 months old, 365 days old."/>
+            <declare name="minutes" type="Integer" array="False" size=""/>
             <declare name="age" type="Integer" array="False" size=""/>
             <declare name="months" type="Integer" array="False" size=""/>
             <declare name="days" type="Integer" array="False" size=""/>
@@ -20,10 +21,9 @@
             <output expression="&quot; How old are you ? &quot;" newline="True"/>
             <input variable="age"/>
             <assign variable="months" expression="age*12"/>
-            <assign variable="days" expression="age*12*365+age/4"/>
-            <assign variable="hours" expression="(age*12*365+age/4)*24"/>
-            <assign variable="minutes" expression="(age*365+age/4)*24*60"/>
-            <assign variable="seconds" expression="(age*365+age/4)*24*60*60"/>
+            <assign variable="days" expression="age*365"/>
+            <assign variable="hours" expression="365*24* age"/>
+            <assign variable="seconds" expression="60*60*24*365*age"/>
             <output expression="&quot; Person age in months&quot; &amp; months" newline="True"/>
             <output expression="&quot; Person age in days = &quot; &amp; days" newline="True"/>
             <output expression="&quot; Person age in hours = &quot; &amp; hours" newline="True"/>
