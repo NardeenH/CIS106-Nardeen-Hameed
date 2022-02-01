@@ -9,5 +9,4 @@ seconds = (age * 365 + float(age) / 4) * 24 * 60 * 60
 print(" Person age in months" + str(months))
 print(" Person age in days = " + str(days))
 print(" Person age in hours = " + str(hours))
-print(" Person age in minutes = " + str(minutes))
 print(" Person age in seconds = " + str(seconds))

@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-01-31 10:45:25 PM"/>
+        <attribute name="saved" value="2022-01-31 10:48:47 PM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMzE7MTA6Mjg6MTYgUE07Mjg3OA=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMzE7MTA6NDU6MjUgUE07MTsyOTg1"/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMzE7MTA6NDg6NDcgUE07MzsyOTk0"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -16,7 +16,6 @@
             <declare name="months" type="Integer" array="False" size=""/>
             <declare name="days" type="Integer" array="False" size=""/>
             <declare name="hours" type="Integer" array="False" size=""/>
-            <declare name="minutes" type="Integer" array="False" size=""/>
             <declare name="seconds" type="Integer" array="False" size=""/>
             <output expression="&quot; How old are you ? &quot;" newline="True"/>
             <input variable="age"/>
@@ -28,7 +27,6 @@
             <output expression="&quot; Person age in months&quot; &amp; months" newline="True"/>
             <output expression="&quot; Person age in days = &quot; &amp; days" newline="True"/>
             <output expression="&quot; Person age in hours = &quot; &amp; hours" newline="True"/>
-            <output expression="&quot; Person age in minutes = &quot; &amp; minutes" newline="True"/>
             <output expression="&quot; Person age in seconds = &quot; &amp; seconds" newline="True"/>
         </body>
     </function>
