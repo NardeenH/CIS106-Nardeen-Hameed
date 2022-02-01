@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-01 12:28:56 PM"/>
+        <attribute name="saved" value="2022-02-01 12:40:59 PM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjY7MDk6NTc6MzcgUE07Mjg5NQ=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMDE7MTI6Mjg6NTYgUE07MjI7MzA0MQ=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMDE7MTI6NDA6NTkgUE07MjQ7MzA0MA=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -19,12 +19,12 @@
             <declare name="yearly" type="Real" array="False" size=""/>
             <declare name="monthly" type="Real" array="False" size=""/>
             <output expression="&quot; How many weekly hours did you work ?&quot;" newline="True"/>
-            <input variable="Hours"/>
+            <input variable="hours"/>
             <output expression="&quot; What is your rate foy pay ?&quot;" newline="True"/>
             <input variable="Rate"/>
             <assign variable="Weekly" expression="rate*hours"/>
-            <assign variable="monthly" expression="rate*30"/>
-            <assign variable="yearly" expression="rate*365"/>
+            <assign variable="monthly" expression="weekly*30"/>
+            <assign variable="yearly" expression="weekly*365"/>
             <output expression="&quot;Salary in Weekly: &quot; &amp; weekly" newline="True"/>
             <output expression="&quot;Salary in Monthly: &quot; &amp; monthly" newline="True"/>
             <output expression="&quot;Salary in Yearly: &quot; &amp; yearly" newline="True"/>
