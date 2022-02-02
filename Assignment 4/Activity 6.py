@@ -11,6 +11,6 @@ print(" how many square feet a gallon need for room? ")
 sqfeet = int(input())
 area = 2 * length * height + 2 * width * height
 gallon = area / sqfeet + 0.9999
-cost = gallon * cost
+totalCost = gallon * cost
 print(" total paint need to cover the room : " + str(gallon))
-print(" price of paint is : " + str(cost))
+print(" Total cost of paint is : " + str(totalCost))

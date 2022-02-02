@@ -4,14 +4,15 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-01 09:15:28 PM"/>
+        <attribute name="saved" value="2022-02-01 09:34:19 PM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMzE7MDg6NTk6NDEgUE07Mjg4Nw=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMDE7MDk6MTU6MjggUE07NDsyOTk0"/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMDE7MDk6MzQ6MTkgUE07NjsyOTk3"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="Create a program that helps the user determine how much paint is required to paint a room and how much it will cost. Ask the user for the length, width, and height of a room, the price of a gallon of paint, and the number of square feet that a gallon of paint will cover. Calculate the total area of the four walls as 2 * length * height + 2 * width * height Calculate the number of gallons as: total area / square feet per gallon Note: You must round up to the next full gallon. To round up, add 0.9999 and then convert the resulting value to an integer. Calculate the total cost of the paint as: gallons * price per gallon"/>
+            <declare name="totalCost" type="Integer" array="False" size=""/>
             <declare name="length" type="Real" array="False" size=""/>
             <declare name="width" type="Real" array="False" size=""/>
             <declare name="height" type="Real" array="False" size=""/>
@@ -30,10 +31,10 @@
             <output expression="&quot; how many square feet a gallon need for room? &quot;" newline="True"/>
             <input variable="sqfeet"/>
             <assign variable="area" expression="2*length*height+2*width*height"/>
-            <assign variable="gallon" expression="((area/sqfeet)+0.999)"/>
-            <assign variable="cost" expression="gallon*cost"/>
+            <assign variable="gallon" expression="area/sqfeet+0.9999"/>
+            <assign variable="totalCost" expression="gallon*cost"/>
             <output expression="&quot; total paint need to cover the room : &quot; &amp; gallon" newline="True"/>
-            <output expression="&quot; price of paint is : &quot; &amp; cost" newline="True"/>
+            <output expression="&quot; Total cost of paint is : &quot; &amp; totalCost" newline="True"/>
         </body>
     </function>
 </flowgorithm>
