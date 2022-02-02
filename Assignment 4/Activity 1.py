@@ -3,9 +3,10 @@ print(" How many weekly hours did you work ?")
 hours = int(input())
 print(" What is your rate foy pay ?")
 rate = int(input())
-weekly = rate * hours
-monthly = weekly * 4
-yearly = weekly * 4 * 52
+salary = rate * hours
+weekly = salary * 7
+monthly = salary * 30 * 12
+yearly = salary * 52 * 7
 print("Salary in Weekly: " + str(weekly))
 print("Salary in Monthly: " + str(monthly))
 print("Salary in Yearly: " + str(yearly))
