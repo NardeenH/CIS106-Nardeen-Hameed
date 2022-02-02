@@ -4,29 +4,29 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-02 08:49:32 AM"/>
+        <attribute name="saved" value="2022-02-02 08:59:13 AM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMDE7MDk6NTA6MDcgUE07Mjg3OQ=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMDI7MDg6NDk6MzIgQU07MjsyOTc5"/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMDI7MDg6NTk6MTMgQU07MzsyOTgw"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="Create a program that asks the user for a distance in miles, and then calculate and display the distance in yards, feet, and inches, or ask the user for a distance in miles, and then calculate and display the distance in kilometers, meters, and centimeters."/>
-            <declare name="distance" type="Integer" array="False" size=""/>
+            <declare name="Mile" type="Integer" array="False" size=""/>
             <declare name="distanceFeet" type="Integer" array="False" size=""/>
             <declare name="distanceYard" type="Integer" array="False" size=""/>
             <declare name="distanceInch" type="Integer" array="False" size=""/>
             <declare name="distanceKilometer" type="Real" array="False" size=""/>
             <declare name="distanceMeter" type="Integer" array="False" size=""/>
             <declare name="distanceCentimeter" type="Integer" array="False" size=""/>
-            <output expression="&quot; What is the Distance ? &quot;" newline="True"/>
-            <input variable="distance"/>
-            <assign variable="distanceFeet" expression="distance*5280"/>
-            <assign variable="distanceYard" expression="distance*1760"/>
-            <assign variable="distanceInch" expression="distance*63360"/>
-            <assign variable="distanceKilometer" expression="distance*1.6069344"/>
-            <assign variable="distanceMeter" expression="distance*1609.34"/>
-            <assign variable="distanceCentimeter" expression="distance*160934"/>
+            <output expression="&quot; What is the Distance in Miles ? &quot;" newline="True"/>
+            <input variable="Mile"/>
+            <assign variable="distanceFeet" expression="Mile*5280"/>
+            <assign variable="distanceYard" expression="Mile*1760"/>
+            <assign variable="distanceInch" expression="Mile*63360"/>
+            <assign variable="distanceKilometer" expression="Mile*1.6069344"/>
+            <assign variable="distanceMeter" expression="Mile*1609.34"/>
+            <assign variable="distanceCentimeter" expression="Mile*160934"/>
             <output expression="&quot; The distance in Feet is = &quot; &amp; distanceFeet" newline="True"/>
             <output expression="&quot; The distance in Yard is = &quot; &amp; distanceYard" newline="True"/>
             <output expression="&quot; The distance in Inch is = &quot; &amp; distanceInch" newline="True"/>
