@@ -4,8 +4,8 @@ hourly = float(input())
 print(" What is your rate foy pay ?")
 rate = float(input())
 weekly = rate * hourly
-monthly = weekly * 12
-yearly = weekly * 12 * 52
+monthly = weekly * 4
+yearly = weekly * 52
 print("Salary in Weekly: " + str(weekly))
 print("Salary in Monthly: " + str(monthly))
 print("Salary in Yearly: " + str(yearly))
