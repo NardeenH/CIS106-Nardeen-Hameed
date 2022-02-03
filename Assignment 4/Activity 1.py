@@ -3,6 +3,7 @@
 
 hours = float(input("How many weekly hours do you work?"))
 rate = float(input("What is the rate of pay?:"))
+
 #finding weekly salary
 weekly = rate * hours 
 #Finding monthly salary
@@ -11,5 +12,5 @@ monthly = weekly * 4
 yearly = weekly * 52
 
 print("weekly = ", weekly)
-print("montly = " , monthly)
+print("monthly = " , monthly)
 print ("yearly = ", yearly)
