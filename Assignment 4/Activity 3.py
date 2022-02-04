@@ -1,15 +1,18 @@
-# Create a program that asks the user for a distance in miles, and then calculate and display the distance in yards, feet, and inches, or ask the user for a distance in miles, and then calculate and display the distance in kilometers, meters, and centimeters.
-print(" What is the Distance in Miles ? ")
-mile = int(input())
-distanceFeet = mile * 5280
-distanceYard = mile * 1760
-distanceInches = mile * 63360
-distanceKilometer = mile * 1.6069344
-distanceMeter = mile * 1609.34
-distanceCentimeter = mile * 160934
-print(" The distance in Feet is = " + str(distanceFeet))
-print(" The distance in Yard is = " + str(distanceYard))
-print(" The distance in Inches is = " + str(distanceInches))
-print(" The distance in kilometer is = " + str(distanceKilometer))
-print(" The distance in Meter is = " + str(distanceMeter))
-print(" The distance in centimeter is = " + str(distanceCentimeter))
+# Calculate the mileage in inches, yards, feet, kilometres, meters, and centimeters
+
+mile = int("What is the distance in mile")
+
+d_Feet = mile * 5280
+d_Yard = mile * 1760
+d_Inches = mile * 63360
+d_kilometer = mile * 1.6069344
+d_Meter = mile * 1609.34
+d_centimeter = mile * 160934
+
+print("The distance is feet is = " + str(d_Feet))
+print("The distance is yard is = " + str(d_Yard))
+print("The distance is inches is = " + str(d_Inches))
+print("The distance is kilometer is = " + str(d_Kilometer))
+print("The distance is meter is = " + str(d_Feet))
+print("The distance is centimeter is = " + str(d_Centimeter))
+
