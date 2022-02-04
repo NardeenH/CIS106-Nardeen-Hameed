@@ -2,10 +2,11 @@
 
 miles = int(input("What is the distance in miles?"))
 
-dFeet = miles * 5280
-dYard = miles * 1760
-dInches = miles * 63360
+d_feet = miles * 5280
+d_yard = miles * 1760
+d_inches = miles * 63360
 
-print("The distance is feet is = " + str(dFeet))
-print("The distance is yard is = " + str(dYard))
-print("The distance is inches is = " + str(dInches))
+print("The distance is feet is = " + str(D_feet))
+print("The distance is yard is = " + str(D_yard))
+print("The distance is inches is = " + str(D_inches))
+
