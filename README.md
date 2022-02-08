@@ -13,3 +13,8 @@ During this session, I learned that all programs need planning and patience to s
 
 ## Assignment 4
 This session was more challenging than the previous one. And I learned how to use the flowchart to solve simple problems. Yes, I found it difficult to solve errors in my dependency code. However, challenge yourself and be patient; you will find a solution. I intend to apply this science in my world to create applications and programs to facilitate life. I want to develop projects and applications in the virtual world, which is gaming technology and social networking. As for the application of this learning in work, many applications exist in our lives that need to be corrected and developed. For example, the development of voice translation software is needed by the deaf. Programming is the most influential language in various industries, transforming the virtual world in industry, commerce, education, and social communication. Therefore, programming remains an area of greatest need.
+
+## Assignment 5
+
+In this session, I learned to enter function parameters into a flowchart, which made me think about introducing new parameters into old applications that can be transformed into newer ones. For example, there is a particular game, like the Mario game; through function parameters, we can add things to this game to develop and make it better than it was.
+There is another reason why I entered the programming world. I do not like to go to the doctor every three months to program my hearing aids. Maybe after I learn how to program, I can program my hearing aid by myself. Also, I would like to create new applications that work for hearing aid or cochlear implant device to make life easier.
