@@ -1,14 +1,33 @@
-def cleanUp():
-    print("Enjoy using Flowchart")
+def calculateArea(length, width):
+    area = length * width
+    
+    return area
+
+def calculateareainYard(area):
+    yard = area / 9.0
+    
+    return yard
+
+def displayRuselt(area, yard):
+    print("The area is=" + str(area))
+    print("The area in yard is=" + str(yard))
+
+def getLength():
+    print("Enter the length")
+    length = int(input())
+    
+    return length
+
+def getWidth():
+    print("Enter Width")
+    width = int(input())
+    
+    return width
 
 # Main
 # Create a program that calculates the area of a room to determine the amount of floor covering required. The room is rectangular with the dimensions measured in feet with decimal fractions. The output needs to be in square yards. There are 3 linear feet (9 square feet) to a yard.
-print(" what is the length of rectangular in feet ?")
-length = float(input())
-print(" What is the width of rectangular in feet ?")
-width = float(input())
-area = length * width
-print(" area = " + str(area) + " feet ")
-yard = area / 9
-print(" area = " + str(yard) + " square yard ")
-cleanUp()
+length = getLength()
+width = getWidth()
+area = calculateArea(length, width)
+yard = calculateareainYard(area)
+displayRuselt(area, yard)
