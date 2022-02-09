@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-08 03:56:13 PM"/>
+        <attribute name="saved" value="2022-02-09 11:16:38 AM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjg7MDk6MDU6MjcgQU07Mjg3NA=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMDg7MDM6NTY6MTMgUE07MTI7MzA0MQ=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMDk7MTE6MTY6MzggQU07MTI7MzAyOQ=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -16,21 +16,56 @@
             <declare name="Length" type="Real" array="False" size=""/>
             <declare name="Width" type="Real" array="False" size=""/>
             <declare name="yard" type="Real" array="False" size=""/>
-            <output expression="&quot; what is the length of rectangular in feet ?&quot;" newline="True"/>
-            <input variable="Length"/>
-            <output expression="&quot; What is the width of rectangular in feet ?&quot;" newline="True"/>
-            <input variable="Width"/>
-            <assign variable="area" expression="Length*Width"/>
-            <output expression="&quot; area = &quot; &amp; area &amp;&quot; feet &quot;" newline="True"/>
-            <assign variable="yard" expression="area/9"/>
-            <output expression="&quot; area = &quot; &amp; yard &amp; &quot; square yard &quot;" newline="True"/>
-            <call expression="CleanUp()"/>
+            <assign variable="length" expression="GetLength()"/>
+            <assign variable="width" expression="GetWidth()"/>
+            <assign variable="area" expression="CalculateArea(Length, Width)"/>
+            <assign variable="yard" expression="CalculateareainYard(area)"/>
+            <call expression="DisplayRuselt(area, yard)"/>
         </body>
     </function>
-    <function name="CleanUp" type="None" variable="">
+    <function name="CalculateArea" type="Integer" variable="area">
+        <parameters>
+            <parameter name="Length" type="Integer" array="False"/>
+            <parameter name="Width" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="area" type="Integer" array="False" size=""/>
+            <assign variable="area" expression="Length*Width"/>
+        </body>
+    </function>
+    <function name="CalculateareainYard" type="Real" variable="yard">
+        <parameters>
+            <parameter name="area" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="yard" type="Real" array="False" size=""/>
+            <assign variable="yard" expression="area/9.0"/>
+        </body>
+    </function>
+    <function name="DisplayRuselt" type="None" variable="">
+        <parameters>
+            <parameter name="area" type="Integer" array="False"/>
+            <parameter name="yard" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;The area is=&quot; &amp; area" newline="True"/>
+            <output expression="&quot;The area in yard is=&quot; &amp; yard" newline="True"/>
+        </body>
+    </function>
+    <function name="GetLength" type="Integer" variable="length">
         <parameters/>
         <body>
-            <output expression="&quot;Enjoy using Flowchart&quot;" newline="True"/>
+            <declare name="length" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the length&quot;" newline="True"/>
+            <input variable="length"/>
+        </body>
+    </function>
+    <function name="GetWidth" type="Integer" variable="width">
+        <parameters/>
+        <body>
+            <declare name="width" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Width&quot;" newline="True"/>
+            <input variable="width"/>
         </body>
     </function>
 </flowgorithm>

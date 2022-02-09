@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="narde"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-09 10:25:16 AM"/>
+        <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMzE7MTA6Mjg6MTYgUE07Mjg3OA=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMDk7MTA6MjU6MTYgQU07ODsyOTgx"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Create a program that asks the user how old they are in years, and then calculate and display their approximate age in months, days, hours, and seconds. For example, a person 1-year-old is 12 months old, 365 days old."/>
+            <declare name="minutes" type="Integer" array="False" size=""/>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <declare name="months" type="Integer" array="False" size=""/>
+            <declare name="days" type="Integer" array="False" size=""/>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <declare name="seconds" type="Integer" array="False" size=""/>
+            <assign variable="age" expression="GetAge()"/>
+            <assign variable="months" expression="CalculateMonths(age)"/>
+            <assign variable="days" expression="CalculateDays(age)"/>
+            <assign variable="hours" expression="CalculateHours(age)"/>
+            <assign variable="seconds" expression="CalculateSeconds(age)"/>
+            <call expression="DisplayResult(months, days, hours, seconds)"/>
+        </body>
+    </function>
+    <function name="CalculateDays" type="Integer" variable="days">
+        <parameters>
+            <parameter name="age" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="days" type="Integer" array="False" size=""/>
+            <assign variable="days" expression="age*365"/>
+        </body>
+    </function>
+    <function name="CalculateHours" type="Integer" variable="hours">
+        <parameters>
+            <parameter name="age" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <assign variable="hours" expression="age*24*365"/>
+        </body>
+    </function>
+    <function name="CalculateMonths" type="Integer" variable="months">
+        <parameters>
+            <parameter name="age" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="months" type="Integer" array="False" size=""/>
+            <assign variable="months" expression="age*12"/>
+        </body>
+    </function>
+    <function name="CalculateSeconds" type="Integer" variable="seconds">
+        <parameters>
+            <parameter name="age" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="seconds" type="Integer" array="False" size=""/>
+            <assign variable="seconds" expression="age*365*24*60*60"/>
+        </body>
+    </function>
+    <function name="DisplayResult" type="None" variable="">
+        <parameters>
+            <parameter name="months" type="Integer" array="False"/>
+            <parameter name="days" type="Integer" array="False"/>
+            <parameter name="hours" type="Integer" array="False"/>
+            <parameter name="seconds" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Age in months is =&quot; &amp; months" newline="True"/>
+            <output expression="&quot;Age in days is=&quot; &amp; days" newline="True"/>
+            <output expression="&quot; Age in hours is=&quot; &amp; hours" newline="True"/>
+            <output expression="&quot;Age in seconds is=&quot; &amp; seconds" newline="True"/>
+        </body>
+    </function>
+    <function name="GetAge" type="Integer" variable="age">
+        <parameters/>
+        <body>
+            <declare name="age" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter your age?&quot;" newline="True"/>
+            <input variable="age"/>
+        </body>
+    </function>
+</flowgorithm>
