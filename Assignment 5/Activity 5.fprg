@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-09 11:33:39 AM"/>
+        <attribute name="saved" value="2022-02-09 11:49:23 AM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjg7MDk6MDU6MjcgQU07Mjg3NA=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMDk7MTE6MzM6MzkgQU07MTM7MzAzMA=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMDk7MTE6NDk6MjMgQU07MTQ7MzAzMQ=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -29,7 +29,7 @@
             <parameter name="Width" type="Real" array="False"/>
         </parameters>
         <body>
-            <declare name="area" type="Integer" array="False" size=""/>
+            <declare name="area" type="Real" array="False" size=""/>
             <assign variable="area" expression="Length*Width"/>
         </body>
     </function>

@@ -14,13 +14,13 @@ def displayRuselt(area, yard):
 
 def getLength():
     print("Enter the length")
-    length = int(input())
+    length = float(input())
     
     return length
 
 def getWidth():
     print("Enter Width")
-    width = int(input())
+    width = float(input())
     
     return width
 
