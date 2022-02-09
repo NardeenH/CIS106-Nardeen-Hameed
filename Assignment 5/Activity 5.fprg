@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-09 11:16:38 AM"/>
+        <attribute name="saved" value="2022-02-09 11:33:39 AM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDEtMjg7MDk6MDU6MjcgQU07Mjg3NA=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMDk7MTE6MTY6MzggQU07MTI7MzAyOQ=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMDk7MTE6MzM6MzkgQU07MTM7MzAzMA=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -23,10 +23,10 @@
             <call expression="DisplayRuselt(area, yard)"/>
         </body>
     </function>
-    <function name="CalculateArea" type="Integer" variable="area">
+    <function name="CalculateArea" type="Real" variable="area">
         <parameters>
-            <parameter name="Length" type="Integer" array="False"/>
-            <parameter name="Width" type="Integer" array="False"/>
+            <parameter name="Length" type="Real" array="False"/>
+            <parameter name="Width" type="Real" array="False"/>
         </parameters>
         <body>
             <declare name="area" type="Integer" array="False" size=""/>
@@ -35,7 +35,7 @@
     </function>
     <function name="CalculateareainYard" type="Real" variable="yard">
         <parameters>
-            <parameter name="area" type="Integer" array="False"/>
+            <parameter name="area" type="Real" array="False"/>
         </parameters>
         <body>
             <declare name="yard" type="Real" array="False" size=""/>
@@ -44,7 +44,7 @@
     </function>
     <function name="DisplayRuselt" type="None" variable="">
         <parameters>
-            <parameter name="area" type="Integer" array="False"/>
+            <parameter name="area" type="Real" array="False"/>
             <parameter name="yard" type="Real" array="False"/>
         </parameters>
         <body>
@@ -52,18 +52,18 @@
             <output expression="&quot;The area in yard is=&quot; &amp; yard" newline="True"/>
         </body>
     </function>
-    <function name="GetLength" type="Integer" variable="length">
+    <function name="GetLength" type="Real" variable="length">
         <parameters/>
         <body>
-            <declare name="length" type="Integer" array="False" size=""/>
+            <declare name="length" type="Real" array="False" size=""/>
             <output expression="&quot;Enter the length&quot;" newline="True"/>
             <input variable="length"/>
         </body>
     </function>
-    <function name="GetWidth" type="Integer" variable="width">
+    <function name="GetWidth" type="Real" variable="width">
         <parameters/>
         <body>
-            <declare name="width" type="Integer" array="False" size=""/>
+            <declare name="width" type="Real" array="False" size=""/>
             <output expression="&quot;Enter Width&quot;" newline="True"/>
             <input variable="width"/>
         </body>
