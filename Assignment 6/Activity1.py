@@ -1,13 +1,16 @@
-# Prompt user for hours per week and rate per hour.
+# Reading hours and rates from user.
+
+WEEKS_PER_MONTH = 4
+WEEKS_PER_YEAR = 52
 
 def get_hourly():
     print("How many hours per week?")
-    hourly = int(input())
+    hourly = float(input())
     return hourly
 
 def get_rate():
     print("what's the rate per week?")
-    rate = int(input())
+    rate = float(input())
     return rate
 
 def calculateWeekly(hourly, rate):
@@ -15,11 +18,11 @@ def calculateWeekly(hourly, rate):
     return weekly
 
 def  calculateMonthly(weekly):
-    monthly = weekly * 4
+    monthly = weekly * WEEKS_PER_MONTH
     return monthly
 
 def calculateYearly(weekly):
-    yearly = weekly * 52
+    yearly = weekly * WEEKS_PER_YEAR
     return yearly
 
 def displayRuselt(weekly, monthly, yearly):
