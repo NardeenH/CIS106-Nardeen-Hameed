@@ -13,22 +13,22 @@ def get_rate():
     return rate
 
 
-def calculateWeekly(hourly, rate):
+def calculate_weekly(hourly, rate):
     weekly = rate * hourly
     return weekly
 
 
-def  calculateMonthly(weekly):
+def  calculate_monthly(weekly):
     monthly = weekly * 4
     return monthly
 
 
-def calculateYearly(weekly):
+def calculate_yearly(weekly):
     yearly = weekly * 52
     return yearly
 
 
-def displayRuselt(weekly, monthly, yearly):
+def display_ruselt(weekly, monthly, yearly):
     print("Salary in weekly is= " + str(weekly))
     print("Salary in monthly is =" + str(monthly))
     print("Salary in yearly is =" + str(yearly))
@@ -36,9 +36,8 @@ def displayRuselt(weekly, monthly, yearly):
 # main()
 hourly = get_hourly()
 rate = get_rate()
-weekly = calculateWeekly(hourly, rate)
-monthly = calculateMonthly(weekly)
-yearly = calculateYearly(weekly)
-displayRuselt(weekly, monthly, yearly)
+weekly = calculate_weekly(hourly, rate)
+monthly = calculate_monthly(weekly)
+yearly = calculate_yearly(weekly)
+display_ruselt(weekly, monthly, yearly)
     
- 
