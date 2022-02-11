@@ -35,12 +35,12 @@ def display_ruselt(weekly, monthly, yearly):
     
     
 def main():
-  hourly = get_hourly()
-  rate = get_rate()
-  weekly = calculate_weekly(hourly, rate)
-  monthly = calculate_monthly(weekly)
-  yearly = calculate_yearly(weekly)
-  display_ruselt(weekly, monthly, yearly)
+    hourly = get_hourly()
+    rate = get_rate()
+    weekly = calculate_weekly(hourly, rate)
+    monthly = calculate_monthly(weekly)
+    yearly = calculate_yearly(weekly)
+    display_ruselt(weekly, monthly, yearly)
     
     
 main()    
