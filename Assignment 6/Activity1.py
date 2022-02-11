@@ -18,7 +18,7 @@ def calculate_weekly(hourly, rate):
     return weekly
 
 
-def  calculate_monthly(weekly):
+def calculate_monthly(weekly):
     monthly = weekly * 4
     return monthly
 
