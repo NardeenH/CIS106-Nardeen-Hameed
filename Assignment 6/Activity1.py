@@ -35,9 +35,9 @@ def displayRuselt(weekly, monthly, yearly):
     
     
 # Main
-hourly = get_hourly()
-rate = get_rate()
-weekly = calculateWeekly(hourly, rate)
-monthly = calculateMonthly(weekly)
-yearly = calculateYearly(weekly)
-displayRuselt(weekly, monthly, yearly)
+    hourly = get_hourly()
+    rate = get_rate()
+    weekly = calculateWeekly(hourly, rate)
+    monthly = calculateMonthly(weekly)
+    yearly = calculateYearly(weekly)
+    displayRuselt(weekly, monthly, yearly)
