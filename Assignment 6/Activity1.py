@@ -33,11 +33,12 @@ def displayRuselt(weekly, monthly, yearly):
     print("Salary in monthly is =" + str(monthly))
     print("Salary in yearly is =" + str(yearly))
     
+# main()
+hourly = get_hourly()
+rate = get_rate()
+weekly = calculateWeekly(hourly, rate)
+monthly = calculateMonthly(weekly)
+yearly = calculateYearly(weekly)
+displayRuselt(weekly, monthly, yearly)
     
-# Main
-    hourly = get_hourly()
-    rate = get_rate()
-    weekly = calculateWeekly(hourly, rate)
-    monthly = calculateMonthly(weekly)
-    yearly = calculateYearly(weekly)
-    displayRuselt(weekly, monthly, yearly)
+ 
