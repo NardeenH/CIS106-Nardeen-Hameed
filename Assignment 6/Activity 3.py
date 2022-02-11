@@ -8,17 +8,17 @@ def get_mile():
 
 
 def calculate_mile_in_yard(miles):
-    yard = miles *1760
+    yard = miles * 1760
     return yard
 
 
 def calculate_mile_in_feet(miles):
-    feet = miles*5280
+    feet = miles * 5280
     return feet
     
     
 def calculate_mile_in_inches(miles):
-    inches = miles*63360
+    inches = miles * 63360
     return inches
 
 
