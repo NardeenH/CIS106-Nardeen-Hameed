@@ -1,13 +1,16 @@
 # Distance Converter
 
+
 def get_mile():
     print("Enter distance per mile")
     miles = int(input())
     return miles
 
+
 def calculate_mile_in_yard(miles):
     yard = miles *1760
     return yard
+
 
 def calculate_mile_in_feet(miles):
     feet = miles*5280
@@ -15,8 +18,9 @@ def calculate_mile_in_feet(miles):
     
     
 def calculate_mile_in_inches(miles):
-    inches = miles*12
+    inches = miles*63360
     return inches
+
 
 def desplay_result(yard, feet, inches):
     print("The mile in yard is =" + str(yard))
@@ -30,5 +34,6 @@ def main():
     feet = calculate_mile_in_feet(miles)
     inches = calculate_mile_in_inches(miles)
     desplay_result(yard, feet, inches)
+    
 
 main()
