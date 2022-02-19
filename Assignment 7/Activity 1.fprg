@@ -1,1 +1,52 @@
-
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="narde"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-19 04:15:10 PM"/>
+        <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMTk7MDI6MTM6NDIgUE07Mjg3OQ=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMTk7MDQ6MTU6MTAgUE07MTsyOTg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Create a program to prompt the user for hours and rate per hour to compute gross pay (hours * rate). Include a calculation to give 1.5 times the hourly rate for any overtime (hours worked above 40 hours).[3] For example, 50 hours worked at $10 per hour with overtime is $550.&#13;&#10;"/>
+            <declare name="hours" type="Real" array="False" size=""/>
+            <declare name="pay" type="Real" array="False" size=""/>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <assign variable="hours" expression="GetHours()"/>
+            <assign variable="rate" expression="GetRate()"/>
+            <if expression="hours &lt;= 40">
+                <then>
+                    <assign variable="pay" expression="hours * rate"/>
+                </then>
+                <else>
+                    <if expression="hours &gt; 40">
+                        <then>
+                            <assign variable="pay" expression="(40* rate + (hours-40)*1.5*rate)"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+            <output expression="&quot; GrossPay is &quot; &amp; pay" newline="True"/>
+        </body>
+    </function>
+    <function name="GetHours" type="Real" variable="hours">
+        <parameters/>
+        <body>
+            <declare name="hours" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter hours&quot;" newline="True"/>
+            <input variable="hours"/>
+        </body>
+    </function>
+    <function name="GetRate" type="Real" variable="rate">
+        <parameters/>
+        <body>
+            <declare name="rate" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter rate per hours&quot;" newline="True"/>
+            <input variable="rate"/>
+        </body>
+    </function>
+</flowgorithm>
