@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="narde"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-22 10:10:33 AM"/>
+        <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjE7MDU6MzM6MDggUE07Mjg3OQ=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjI7MTA6MTA6MzMgQU07MTsyOTYy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Create a program that asks the user how old they are in years. Then ask the user if they would like to know how old they are in (M)onths, (D)ays, (H)ours, or (S)econds. Use if/else conditional statements to display their approximate age in the selected timeframe. Do not perform any unnecessary calculations.&#10;"/>
+            <declare name="UserAge" type="Integer" array="False" size=""/>
+            <declare name="month" type="Integer" array="False" size=""/>
+            <declare name="day" type="Integer" array="False" size=""/>
+            <declare name="UserAnswer" type="String" array="False" size=""/>
+            <assign variable="UserAge" expression="GetAge()"/>
+            <assign variable="UserAnswer" expression="GetAnswer()"/>
+            <if expression="UserAnswer = &quot;M&quot;">
+                <then>
+                    <call expression="ProcessMonth(UserAge)"/>
+                </then>
+                <else>
+                    <if expression="UserAnswer = &quot;D&quot;">
+                        <then>
+                            <call expression="ProcessDay(UserAge)"/>
+                        </then>
+                        <else>
+                            <if expression="UserAnswer = &quot;H&quot;">
+                                <then>
+                                    <call expression="ProcessHour(UserAge)"/>
+                                </then>
+                                <else>
+                                    <if expression="UserAnswer = &quot;S&quot;">
+                                        <then>
+                                            <call expression="ProcessSecond(UserAge)"/>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="GetAge" type="Integer" variable="UserAge">
+        <parameters/>
+        <body>
+            <declare name="UserAge" type="Integer" array="False" size=""/>
+            <output expression="&quot;How old you are in years?&quot;" newline="True"/>
+            <input variable="UserAge"/>
+        </body>
+    </function>
+    <function name="GetAnswer" type="String" variable="UserAnswer">
+        <parameters/>
+        <body>
+            <declare name="UserAnswer" type="String" array="False" size=""/>
+            <output expression="&quot;If you Would like to know your age in months print M, in Day D&#13;&#10;in hours H and in second S&quot;" newline="True"/>
+            <input variable="UserAnswer"/>
+        </body>
+    </function>
+    <function name="ProcessDay" type="Integer" variable="day">
+        <parameters>
+            <parameter name="UserAge" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="day" type="Integer" array="False" size=""/>
+            <assign variable="day" expression="UserAge * 365"/>
+            <output expression="&quot;Your age is days is &quot; &amp; day" newline="True"/>
+        </body>
+    </function>
+    <function name="ProcessHour" type="Integer" variable="hour">
+        <parameters>
+            <parameter name="UserAge" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="hour" type="Integer" array="False" size=""/>
+            <assign variable="hour" expression="UserAge * 24 * 365"/>
+            <output expression="&quot; You Age in hours is &quot; &amp; hour" newline="True"/>
+        </body>
+    </function>
+    <function name="ProcessMonth" type="Integer" variable="month">
+        <parameters>
+            <parameter name="UserAge" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="month" type="Integer" array="False" size=""/>
+            <assign variable="month" expression="UserAge * 12"/>
+            <output expression="&quot; your age in months is&quot; &amp; month" newline="True"/>
+        </body>
+    </function>
+    <function name="ProcessSecond" type="Integer" variable="second">
+        <parameters>
+            <parameter name="UserAge" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="second" type="Integer" array="False" size=""/>
+            <assign variable="second" expression="UserAge * 365* 24 * 60 * 60"/>
+            <output expression="&quot;Your age in seconds is  &quot; &amp; second" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
