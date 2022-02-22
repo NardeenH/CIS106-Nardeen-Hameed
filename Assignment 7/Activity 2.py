@@ -49,3 +49,5 @@ else:
         else:
             if userAnswer == "S":
                 processSecond(userAge)
+            else:
+                print("Please enter correct data!")
