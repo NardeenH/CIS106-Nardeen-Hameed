@@ -4,13 +4,14 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-22 08:34:39 PM"/>
+        <attribute name="saved" value="2022-02-22 08:47:51 PM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjI7MDg6MDc6MjIgUE07Mjg4MA=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjI7MDg6MzQ6MzkgUE07MTsyOTk2"/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjI7MDg6NDc6NTEgUE07MjsyOTk1"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
+            <comment text="Create a program to prompt the user for hours and rate per hour to compute gross pay (hours * rate). Include a calculation to give 1.5 times the hourly rate for any overtime (hours worked above 40 hours).[3] For example, 50 hours worked at $10 per hour with overtime is $550."/>
             <declare name="hours" type="Real" array="False" size=""/>
             <declare name="rate" type="Real" array="False" size=""/>
             <assign variable="hours" expression="GetHours()"/>
@@ -40,7 +41,17 @@
         <body>
             <declare name="pay" type="Integer" array="False" size=""/>
             <assign variable="pay" expression="hours * rate"/>
-            <output expression="&quot;The Payment for Regular Hours is&quot;  &amp; pay" newline="True"/>
+            <call expression="DisplayReuglarHours(hours, rate, pay)"/>
+        </body>
+    </function>
+    <function name="DisplayReuglarHours" type="None" variable="">
+        <parameters>
+            <parameter name="hours" type="Real" array="False"/>
+            <parameter name="rate" type="Real" array="False"/>
+            <parameter name="pay" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;The payment for Regula Hours is:&quot;  &amp; pay" newline="True"/>
         </body>
     </function>
     <function name="GetHours" type="Real" variable="hours">
@@ -67,6 +78,16 @@
         <body>
             <declare name="pay" type="Integer" array="False" size=""/>
             <assign variable="pay" expression="(40* rate + (hours-40)*1.5*rate)"/>
+            <call expression="OvertimeResult(hours, rate, pay)"/>
+        </body>
+    </function>
+    <function name="OvertimeResult" type="None" variable="">
+        <parameters>
+            <parameter name="hours" type="Real" array="False"/>
+            <parameter name="rate" type="Real" array="False"/>
+            <parameter name="pay" type="Integer" array="False"/>
+        </parameters>
+        <body>
             <output expression="&quot;The payment for Overtime Hours is&quot;  &amp; pay" newline="True"/>
         </body>
     </function>
