@@ -21,3 +21,8 @@ There is another reason why I entered the programming world. I do not like to go
 ## Assignment 6
 In this session, I learned how to write good code. Writing specific code requires a lot of time and mastery until the result comes out as you want. Programming became another science subject, requiring diligence and continued learning in school. I intend to learn to program very well, and I would like to apply this learning to developing the web. Also, I want to create programs to help people who have hearing loss. Programming is the most influential language in various industries, transforming the virtual world in industry, commerce, education, and social communication. Therefore, programming remains an area of greatest need.
 
+## Assignment 7
+This session was the most difficult because I did not know how to implement the conditions. After research and reading, I learned how to add conditions to a relative flow. I would like to apply this learning to create and develop many programs in my own world. For example, I would like to create a Vibration alarm program to help deaf mothers with newborn babies. I was thinking about my future if I had a child; how can I hear the baby crying while I sleep. So I want to do rocking programs to know if a baby cries. I do not know if there is the same program as this. 
+When I was a child, I liked foreign films and series, especially investigation series. When I was a kid, my favorite series was NCIS, starring Mark Harmon. I always dreamed of becoming a criminal investigator one day. And if I will become a successful programmer in one day, I hope there will be an opportunity to work for the FBI!. So, this is how I want to apply this learning in career opportunities.
+
+
