@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-22 02:45:13 PM"/>
+        <attribute name="saved" value="2022-02-22 09:04:14 PM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjE7MDU6MzM6MDggUE07Mjg3OQ=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjI7MDI6NDU6MTMgUE07MjsyOTg1"/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjI7MDk6MDQ6MTQgUE07MzsyOTg5"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -49,6 +49,14 @@
             </if>
         </body>
     </function>
+    <function name="DayResult" type="None" variable="">
+        <parameters>
+            <parameter name="day" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Your Age in Days is:&quot;  &amp; day" newline="True"/>
+        </body>
+    </function>
     <function name="GetAge" type="Integer" variable="UserAge">
         <parameters/>
         <body>
@@ -61,8 +69,24 @@
         <parameters/>
         <body>
             <declare name="UserAnswer" type="String" array="False" size=""/>
-            <output expression="&quot;If you Would like to know your age in months print M, in Day D&#13;&#10;in hours H and in second S&quot;" newline="True"/>
+            <output expression="&quot;If you Would like to know your age print:M for months: D for days:H for hours: S for seconds:&quot;" newline="True"/>
             <input variable="UserAnswer"/>
+        </body>
+    </function>
+    <function name="HoursResult" type="None" variable="">
+        <parameters>
+            <parameter name="hour" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;You Age in Hours is:&quot;  &amp; hour" newline="True"/>
+        </body>
+    </function>
+    <function name="MonthResult" type="None" variable="">
+        <parameters>
+            <parameter name="month" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot; your age in months is:&quot;  &amp; month" newline="True"/>
         </body>
     </function>
     <function name="ProcessDay" type="Integer" variable="day">
@@ -72,7 +96,7 @@
         <body>
             <declare name="day" type="Integer" array="False" size=""/>
             <assign variable="day" expression="UserAge * 365"/>
-            <output expression="&quot;Your age is days is &quot; &amp; day" newline="True"/>
+            <call expression="DayResult(day)"/>
         </body>
     </function>
     <function name="ProcessHour" type="Integer" variable="hour">
@@ -82,7 +106,7 @@
         <body>
             <declare name="hour" type="Integer" array="False" size=""/>
             <assign variable="hour" expression="UserAge * 24 * 365"/>
-            <output expression="&quot; You Age in hours is &quot; &amp; hour" newline="True"/>
+            <call expression="HoursResult(hour)"/>
         </body>
     </function>
     <function name="ProcessMonth" type="Integer" variable="month">
@@ -92,7 +116,7 @@
         <body>
             <declare name="month" type="Integer" array="False" size=""/>
             <assign variable="month" expression="UserAge * 12"/>
-            <output expression="&quot; your age in months is&quot; &amp; month" newline="True"/>
+            <call expression="MonthResult(month)"/>
         </body>
     </function>
     <function name="ProcessSecond" type="Integer" variable="second">
@@ -102,7 +126,15 @@
         <body>
             <declare name="second" type="Integer" array="False" size=""/>
             <assign variable="second" expression="UserAge * 365* 24 * 60 * 60"/>
-            <output expression="&quot;Your age in seconds is  &quot; &amp; second" newline="True"/>
+            <call expression="SecondResult(second)"/>
+        </body>
+    </function>
+    <function name="SecondResult" type="None" variable="">
+        <parameters>
+            <parameter name="second" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <output expression="&quot;Your Age in Seconds is:&quot;  &amp; second" newline="True"/>
         </body>
     </function>
 </flowgorithm>
