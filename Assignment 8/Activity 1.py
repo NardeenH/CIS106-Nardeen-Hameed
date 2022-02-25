@@ -10,7 +10,7 @@ def forLoop(value, exp):
     count = 1
     print("For Loop Counting")
     for count in range(1, exp + 1, 1):
-        print(str(value) + "*" + str(count) + " = " + str(value * count))
+        print(str(value) + " * " + str(count) + " = " + str(value * count))
 
 def getExp():
     print("Enter the Number of Expressions:")
