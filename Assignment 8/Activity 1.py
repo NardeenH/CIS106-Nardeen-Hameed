@@ -1,8 +1,9 @@
 def displayForloop(value, exp, count):
     print(str(value) + " * " + str(count) + " = " + str(value * count))
 
-def forLoop(value, exp, count):
+def forLoop(value, exp):
     print("For Loop Counting")
+    count = 1
     for count in range(1, exp + 1, 1):
         displayForloop(value, exp, count)
 
@@ -27,5 +28,4 @@ def getValue():
 # Create a program that uses a loop to generate a list of multiplication expressions for a given value. Ask the user to enter the value and the number of expressions to be displayed.
 value = getValue()
 exp = getExp()
-count = getCount()
-forLoop(value, exp, count)
+forLoop(value, exp)
