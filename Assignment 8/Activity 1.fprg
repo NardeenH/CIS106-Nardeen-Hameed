@@ -4,13 +4,14 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-25 10:04:28 AM"/>
+        <attribute name="saved" value="2022-02-25 10:19:18 AM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjU7MDk6MTE6MjcgQU07Mjg2OQ=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjU7MTA6MDQ6MjggQU07MTsyOTcy"/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjU7MTA6MTk6MTggQU07MjsyOTc4"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
+            <comment text="Create a program that uses a loop to generate a list of multiplication expressions for a given value. Ask the user to enter the value and the number of expressions to be displayed."/>
             <declare name="value" type="Integer" array="False" size=""/>
             <declare name="exp" type="Integer" array="False" size=""/>
             <assign variable="value" expression="GetValue()"/>
@@ -26,11 +27,11 @@
             <parameter name="exp" type="Integer" array="False"/>
         </parameters>
         <body>
-            <declare name="i" type="Integer" array="False" size=""/>
-            <assign variable="i" expression="1"/>
-            <do expression="i&lt;=exp">
-                <output expression="value &amp; &quot;*&quot; &amp; i &amp; &quot; = &quot; &amp;( value*i)" newline="True"/>
-                <assign variable="i" expression="i+1"/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="1"/>
+            <do expression="count&lt;=exp">
+                <output expression="value &amp; &quot;*&quot; &amp; count &amp; &quot; = &quot; &amp;( value*count)" newline="True"/>
+                <assign variable="count" expression="count+1"/>
             </do>
         </body>
     </function>
@@ -40,10 +41,10 @@
             <parameter name="exp" type="Integer" array="False"/>
         </parameters>
         <body>
-            <declare name="i" type="Integer" array="False" size=""/>
-            <assign variable="i" expression="1"/>
-            <for variable="i" start="1" end="100" direction="inc" step="1">
-                <output expression="value &amp; &quot;*&quot; &amp; i &amp; &quot; = &quot; &amp;( value*i)" newline="True"/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="1"/>
+            <for variable="count" start="1" end="3" direction="inc" step="1">
+                <output expression="value &amp; &quot;*&quot; &amp; count &amp; &quot; = &quot; &amp;( value*count)" newline="True"/>
             </for>
         </body>
     </function>
@@ -69,11 +70,11 @@
             <parameter name="exp" type="Integer" array="False"/>
         </parameters>
         <body>
-            <declare name="i" type="Integer" array="False" size=""/>
-            <assign variable="i" expression="1"/>
-            <while expression="i &lt;= exp">
-                <output expression="value &amp; &quot;*&quot; &amp; i &amp; &quot; = &quot; &amp;( value*i)" newline="True"/>
-                <assign variable="i" expression="i+1"/>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="1"/>
+            <while expression="count &lt;= exp">
+                <output expression="value &amp; &quot;*&quot; &amp; count &amp; &quot; = &quot; &amp;( value*count)" newline="True"/>
+                <assign variable="count" expression="count+1"/>
             </while>
         </body>
     </function>

@@ -1,14 +1,14 @@
 def doLoop(value, exp):
-    i = 1
+    count = 1
     while True:    #This simulates a Do Loop
-        print(str(value) + "*" + str(i) + " = " + str(value * i))
-        i = i + 1
-        if not(i <= exp): break   #Exit loop
+        print(str(value) + "*" + str(count) + " = " + str(value * count))
+        count = count + 1
+        if not(count <= exp): break   #Exit loop
 
 def forLoop(value, exp):
-    i = 1
-    for i in range(1, 100 + 1, 1):
-        print(str(value) + "*" + str(i) + " = " + str(value * i))
+    count = 1
+    for count in range(1, 3 + 1, 1):
+        print(str(value) + "*" + str(count) + " = " + str(value * count))
 
 def getExp():
     print("Enter the Number of Expressions:")
@@ -23,12 +23,13 @@ def getValue():
     return value
 
 def whileLoop(value, exp):
-    i = 1
-    while i <= exp:
-        print(str(value) + "*" + str(i) + " = " + str(value * i))
-        i = i + 1
+    count = 1
+    while count <= exp:
+        print(str(value) + "*" + str(count) + " = " + str(value * count))
+        count = count + 1
 
 # Main
+# Create a program that uses a loop to generate a list of multiplication expressions for a given value. Ask the user to enter the value and the number of expressions to be displayed.
 value = getValue()
 exp = getExp()
 whileLoop(value, exp)
