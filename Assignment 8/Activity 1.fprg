@@ -1,1 +1,80 @@
-
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="narde"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-25 10:04:28 AM"/>
+        <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjU7MDk6MTE6MjcgQU07Mjg2OQ=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjU7MTA6MDQ6MjggQU07MTsyOTcy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <declare name="exp" type="Integer" array="False" size=""/>
+            <assign variable="value" expression="GetValue()"/>
+            <assign variable="exp" expression="GetExp()"/>
+            <call expression="WhileLoop(value, exp)"/>
+            <call expression="DoLoop(value, exp)"/>
+            <call expression="ForLoop(value, exp)"/>
+        </body>
+    </function>
+    <function name="DoLoop" type="None" variable="">
+        <parameters>
+            <parameter name="value" type="Integer" array="False"/>
+            <parameter name="exp" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="1"/>
+            <do expression="i&lt;=exp">
+                <output expression="value &amp; &quot;*&quot; &amp; i &amp; &quot; = &quot; &amp;( value*i)" newline="True"/>
+                <assign variable="i" expression="i+1"/>
+            </do>
+        </body>
+    </function>
+    <function name="ForLoop" type="None" variable="">
+        <parameters>
+            <parameter name="value" type="Integer" array="False"/>
+            <parameter name="exp" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="1"/>
+            <for variable="i" start="1" end="100" direction="inc" step="1">
+                <output expression="value &amp; &quot;*&quot; &amp; i &amp; &quot; = &quot; &amp;( value*i)" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="GetExp" type="Integer" variable="exp">
+        <parameters/>
+        <body>
+            <declare name="exp" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the Number of Expressions:&quot;" newline="True"/>
+            <input variable="exp"/>
+        </body>
+    </function>
+    <function name="GetValue" type="Integer" variable="value">
+        <parameters/>
+        <body>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Value:&quot;" newline="True"/>
+            <input variable="value"/>
+        </body>
+    </function>
+    <function name="WhileLoop" type="None" variable="">
+        <parameters>
+            <parameter name="value" type="Integer" array="False"/>
+            <parameter name="exp" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="i" type="Integer" array="False" size=""/>
+            <assign variable="i" expression="1"/>
+            <while expression="i &lt;= exp">
+                <output expression="value &amp; &quot;*&quot; &amp; i &amp; &quot; = &quot; &amp;( value*i)" newline="True"/>
+                <assign variable="i" expression="i+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
