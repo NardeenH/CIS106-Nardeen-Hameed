@@ -1,5 +1,6 @@
 def doLoop(value, exp):
     count = 1
+    print("Do Loop Counting:")
     while True:    #This simulates a Do Loop
         print(str(value) + "*" + str(count) + " = " + str(value * count))
         count = count + 1
@@ -7,6 +8,7 @@ def doLoop(value, exp):
 
 def forLoop(value, exp):
     count = 1
+    print("For Loop Counting:")
     for count in range(1, 3 + 1, 1):
         print(str(value) + "*" + str(count) + " = " + str(value * count))
 
@@ -24,6 +26,7 @@ def getValue():
 
 def whileLoop(value, exp):
     count = 1
+    print("While Loop Counting:")
     while count <= exp:
         print(str(value) + "*" + str(count) + " = " + str(value * count))
         count = count + 1

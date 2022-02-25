@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-25 10:19:18 AM"/>
+        <attribute name="saved" value="2022-02-25 11:06:05 AM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjU7MDk6MTE6MjcgQU07Mjg2OQ=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjU7MTA6MTk6MTggQU07MjsyOTc4"/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjU7MTE6MDY6MDUgQU07NDsyOTcz"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -29,6 +29,7 @@
         <body>
             <declare name="count" type="Integer" array="False" size=""/>
             <assign variable="count" expression="1"/>
+            <output expression="&quot;Do Loop Counting:&quot;" newline="True"/>
             <do expression="count&lt;=exp">
                 <output expression="value &amp; &quot;*&quot; &amp; count &amp; &quot; = &quot; &amp;( value*count)" newline="True"/>
                 <assign variable="count" expression="count+1"/>
@@ -43,6 +44,7 @@
         <body>
             <declare name="count" type="Integer" array="False" size=""/>
             <assign variable="count" expression="1"/>
+            <output expression="&quot;For Loop Counting:&quot;" newline="True"/>
             <for variable="count" start="1" end="3" direction="inc" step="1">
                 <output expression="value &amp; &quot;*&quot; &amp; count &amp; &quot; = &quot; &amp;( value*count)" newline="True"/>
             </for>
@@ -72,8 +74,9 @@
         <body>
             <declare name="count" type="Integer" array="False" size=""/>
             <assign variable="count" expression="1"/>
+            <output expression="&quot;While Loop Counting:&quot;" newline="True"/>
             <while expression="count &lt;= exp">
-                <output expression="value &amp; &quot;*&quot; &amp; count &amp; &quot; = &quot; &amp;( value*count)" newline="True"/>
+                <output expression="value &amp; &quot;*&quot; &amp; count&amp; &quot; = &quot; &amp;( value*count)" newline="True"/>
                 <assign variable="count" expression="count+1"/>
             </while>
         </body>
