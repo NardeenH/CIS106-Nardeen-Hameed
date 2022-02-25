@@ -1816,7 +1816,7 @@ def get_python_functions(path, filename):
 
     pattern = r"^def (.+?)\((.*?)\).*?:"
     matches = []
-    for match in re.finditer(pattern, text, re.MULTILINE):
+    for match in re.finditer(pattern, text, re.MULTILINE | re.DOTALL):
         matches.append(match)
 
     functions = []
