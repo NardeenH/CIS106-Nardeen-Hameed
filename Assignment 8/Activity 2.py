@@ -19,6 +19,11 @@ def for_loop(numgrade):
         score = get_realscore(x)
         total = total + score
     return total / numgrade
+
+
+def display_result(avg):
+    print("The average is:" + str())
+    return avg
     
      
 def main():
