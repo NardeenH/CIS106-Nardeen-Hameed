@@ -1,9 +1,12 @@
+def callLoop():
+    print("For Loop >>")
+
 def displayForloop(value, exp, count):
     print(str(value) + " * " + str(count) + " = " + str(value * count))
 
 def forLoop(value, exp):
-    print("For Loop Counting")
-    count = 1
+    callLoop()
+    count = getCount()
     for count in range(1, exp + 1, 1):
         displayForloop(value, exp, count)
 
