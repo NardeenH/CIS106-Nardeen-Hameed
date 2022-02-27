@@ -8,7 +8,7 @@ def get_grade():
 
 
 def get_realscore(x):
-    print("Enter score" + str( x + 1 ) + ":")
+    print("Enter score" + str(x + 1) + ":")
     score = float(input())
     return score
 
@@ -18,13 +18,13 @@ def for_loop(numgrade):
     for x in range(0, numgrade - 1 + 1, 1):
         score = get_realscore(x)
         total = total + score
-    return total/numgrade
+    return total / numgrade
     
      
-def Main():
+def main():
     numgrade = get_grade()    
     avg = for_loop(numgrade)
     print("The average is:" + str(avg))
     
 
-Main()
+main()
