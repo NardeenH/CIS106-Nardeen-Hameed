@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-27 04:31:03 PM"/>
+        <attribute name="saved" value="2022-02-27 04:36:35 PM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjU7MDk6MTE6MjcgQU07Mjg2OQ=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjc7MDQ6MzE6MDMgUE07MTQ7MzAzNw=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjc7MDQ6MzY6MzUgUE07MTU7MzA0OA=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -43,17 +43,10 @@
         <body>
             <call expression="CallLoop"/>
             <declare name="count" type="Integer" array="False" size=""/>
-            <assign variable="count" expression="Getcount()"/>
+            <assign variable="count" expression="0"/>
             <for variable="count" start="1" end="exp" direction="inc" step="1">
                 <call expression="DisplayForloop(value, exp, count)"/>
             </for>
-        </body>
-    </function>
-    <function name="GetCount" type="Integer" variable="count">
-        <parameters/>
-        <body>
-            <declare name="count" type="Integer" array="False" size=""/>
-            <assign variable="count" expression="1"/>
         </body>
     </function>
     <function name="GetExp" type="Integer" variable="exp">

@@ -6,11 +6,11 @@ def displayForloop(value, exp, count):
 
 def forLoop(value, exp):
     callLoop()
-    count = getCount()
+    count = 0
     for count in range(1, exp + 1, 1):
         displayForloop(value, exp, count)
 
-def getCount():
+def getCount(count):
     count = 1
     
     return count
