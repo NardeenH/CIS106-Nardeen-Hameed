@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="narde"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-25 01:11:17 PM"/>
+        <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjU7MDk6MTE6MjcgQU07Mjg2OQ=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjU7MDE6MTE6MTcgUE07NTsyOTg3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Create a program that uses a loop to generate a list of multiplication expressions for a given value. Ask the user to enter the value and the number of expressions to be displayed."/>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <declare name="exp" type="Integer" array="False" size=""/>
+            <assign variable="value" expression="GetValue()"/>
+            <assign variable="exp" expression="GetExp()"/>
+            <call expression="ForLoop(value, exp)"/>
+        </body>
+    </function>
+    <function name="DoLoop" type="None" variable="">
+        <parameters>
+            <parameter name="value" type="Integer" array="False"/>
+            <parameter name="exp" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="1"/>
+            <output expression="&quot;Do Loop Counting:&quot;" newline="True"/>
+            <do expression="count&lt;=exp">
+                <output expression="value &amp; &quot;*&quot; &amp; count &amp; &quot; = &quot; &amp;( value*count)" newline="True"/>
+                <assign variable="count" expression="count+1"/>
+            </do>
+        </body>
+    </function>
+    <function name="ForLoop" type="None" variable="">
+        <parameters>
+            <parameter name="value" type="Integer" array="False"/>
+            <parameter name="exp" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="1"/>
+            <output expression="&quot;For Loop Counting&quot;" newline="True"/>
+            <for variable="count" start="1" end="exp" direction="inc" step="1">
+                <output expression="value &amp; &quot;*&quot; &amp; count &amp; &quot; = &quot; &amp;( value*count)" newline="True"/>
+            </for>
+        </body>
+    </function>
+    <function name="GetExp" type="Integer" variable="exp">
+        <parameters/>
+        <body>
+            <declare name="exp" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter the Number of Expressions:&quot;" newline="True"/>
+            <input variable="exp"/>
+        </body>
+    </function>
+    <function name="GetValue" type="Integer" variable="value">
+        <parameters/>
+        <body>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Value:&quot;" newline="True"/>
+            <input variable="value"/>
+        </body>
+    </function>
+    <function name="WhileLoop" type="None" variable="">
+        <parameters>
+            <parameter name="value" type="Integer" array="False"/>
+            <parameter name="exp" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="1"/>
+            <output expression="&quot;While Loop Counting:&quot;" newline="True"/>
+            <while expression="count &lt;= exp">
+                <assign variable="count" expression="count+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
