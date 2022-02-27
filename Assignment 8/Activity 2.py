@@ -2,13 +2,12 @@
     
 
 def get_grade():
-    print("How many grade you woukd like to enter?")
+    print("How many grades you woukd like to enter?")
     numgrade = int(input())
     return numgrade
 
 
 def get_realscore(x):
-    print("Enter score" + str(x + 1) + ":")
     score = float(input())
     return score
 
