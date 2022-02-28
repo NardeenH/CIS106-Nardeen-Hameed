@@ -13,23 +13,22 @@ def get_realscore(x):
     return score
 
 
-def for_loop(numgrade):
+def process_grades(number_of_grades):
     total = 0
-    for x in range(0, numgrade - 1 + 1, 1):
-        score = get_realscore(x)
+    for count in range(0, number_of_grades - 1 + 1, 1):
+        score = get_realscore(count)
         total = total + score
-    return total / numgrade
+    return total / number_of_grades
 
 
-def display_result(avg):
-    print("The average is:" + str())
-    return avg
+def display_result(average):
+    print("The average is:" + str(average))
     
      
 def main():
-    numgrade = get_grade()    
-    avg = for_loop(numgrade)
-    print("The average is:" + str(avg))
+    number_of_grades = get_grade()    
+    average = process_grades(number_of_grades)
+    display_result(average)
     
 
 main()
