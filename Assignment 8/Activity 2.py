@@ -7,15 +7,15 @@ def get_grade():
     return numgrade
 
 
-def get_realscore(x):
-    print("Score" + str(x + 1) + ":")
+def get_realscore(count):
+    print("Score" + str(count + 1) + ":")
     score = float(input())
     return score
 
 
 def process_grades(number_of_grades):
     total = 0
-    for count in range(0, number_of_grades - 1 + 1, 1):
+    for count in range(number_of_grades):
         score = get_realscore(count)
         total = total + score
     return total / number_of_grades
