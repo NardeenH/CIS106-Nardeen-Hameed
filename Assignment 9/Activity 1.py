@@ -1,8 +1,3 @@
-def getCount():
-    count = 1
-    
-    return count
-
 def getExpressions():
     print("Enter Number of Expressions")
     expressions = int(input())
@@ -16,9 +11,9 @@ def getValue():
     return value
 
 def processExpression(value, expressions):
-    count = getCount()
+    count = 1
     while count <= expressions:
-        print(str(value) + "*" + str(count) + "=" + str(value * count))
+        print(str(value) + " * " + str(count) + " = " + str(value * count))
         count = count + 1
 
 # Main

@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-02-28 09:27:15 AM"/>
+        <attribute name="saved" value="2022-02-28 09:35:48 AM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjU7MDk6MTE6MjcgQU07Mjg2OQ=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjg7MDk6Mjc6MTUgQU07MTY7MzAzOA=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjg7MDk6MzU6NDggQU07MTc7MzA0NA=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -17,13 +17,6 @@
             <assign variable="value" expression="GetValue()"/>
             <assign variable="expressions" expression="GetExpressions()"/>
             <call expression="ProcessExpression(value, expressions)"/>
-        </body>
-    </function>
-    <function name="GetCount" type="Integer" variable="count">
-        <parameters/>
-        <body>
-            <declare name="count" type="Integer" array="False" size=""/>
-            <assign variable="count" expression="1"/>
         </body>
     </function>
     <function name="GetExpressions" type="Integer" variable="expressions">
@@ -49,9 +42,9 @@
         </parameters>
         <body>
             <declare name="count" type="Integer" array="False" size=""/>
-            <assign variable="count" expression="GetCount()"/>
+            <assign variable="count" expression="1"/>
             <while expression="count &lt;= expressions">
-                <output expression="value&amp;&quot;*&quot;&amp;count&amp;&quot;=&quot;&amp;(value*count)" newline="True"/>
+                <output expression="value &amp;&quot; * &quot; &amp;count&amp; &quot; = &quot; &amp;(value * count)" newline="True"/>
                 <assign variable="count" expression="count+1"/>
             </while>
         </body>
