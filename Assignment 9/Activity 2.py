@@ -16,7 +16,7 @@ def while_loop(number):
     total = 0
     count = 0
     while count < number:
-        print("Score")
+        print("Score" + str(count+ 1) + ":")
         score = float(input())
         total = total + score
         count = count + 1
@@ -27,12 +27,11 @@ def while_loop(number):
  
 def average_result(average):
     print("The average of the score is:" + str(average))
+    return average
     
 
 def main():
     number = get_number()
-    total = 0
-    count = 0
     while_loop(number)
     
     
