@@ -8,6 +8,7 @@ def get_grade():
 
 
 def get_realscore(x):
+    print("Score" + str(x + 1) + ":")
     score = float(input())
     return score
 
