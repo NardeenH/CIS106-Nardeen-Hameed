@@ -1,1 +1,59 @@
-
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="narde"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2022-02-28 09:27:15 AM"/>
+        <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjU7MDk6MTE6MjcgQU07Mjg2OQ=="/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDItMjg7MDk6Mjc6MTUgQU07MTY7MzAzOA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <comment text="Create a program that uses a loop to generate a list of multiplication expressions for a given value. Ask the user to enter the value and the number of expressions to be displayed."/>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <declare name="expressions" type="Integer" array="False" size=""/>
+            <assign variable="value" expression="GetValue()"/>
+            <assign variable="expressions" expression="GetExpressions()"/>
+            <call expression="ProcessExpression(value, expressions)"/>
+        </body>
+    </function>
+    <function name="GetCount" type="Integer" variable="count">
+        <parameters/>
+        <body>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="1"/>
+        </body>
+    </function>
+    <function name="GetExpressions" type="Integer" variable="expressions">
+        <parameters/>
+        <body>
+            <declare name="expressions" type="Integer" array="False" size=""/>
+            <output expression="&quot;Enter Number of Expressions&quot;" newline="True"/>
+            <input variable="expressions"/>
+        </body>
+    </function>
+    <function name="GetValue" type="Integer" variable="value">
+        <parameters/>
+        <body>
+            <declare name="value" type="Integer" array="False" size=""/>
+            <output expression="&quot; Enter Value:&quot;" newline="True"/>
+            <input variable="value"/>
+        </body>
+    </function>
+    <function name="ProcessExpression" type="None" variable="">
+        <parameters>
+            <parameter name="value" type="Integer" array="False"/>
+            <parameter name="expressions" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="count" type="Integer" array="False" size=""/>
+            <assign variable="count" expression="GetCount()"/>
+            <while expression="count &lt;= expressions">
+                <output expression="value&amp;&quot;*&quot;&amp;count&amp;&quot;=&quot;&amp;(value*count)" newline="True"/>
+                <assign variable="count" expression="count+1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>
