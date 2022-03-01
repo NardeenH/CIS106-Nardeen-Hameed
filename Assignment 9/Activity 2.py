@@ -28,7 +28,6 @@ def while_loop(number_of_grade):
  
 def average_result(average):
     print("The average of the score is:" + str(average))
-    return average
     
 
 def main():
