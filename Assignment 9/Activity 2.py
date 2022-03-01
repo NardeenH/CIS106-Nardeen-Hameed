@@ -8,7 +8,7 @@ def get_number():
 
 
 def get_realscore(count):
-    print("score")
+    print("score" + str(count + 1) + ":")
     score = float(input())
     return score
 
