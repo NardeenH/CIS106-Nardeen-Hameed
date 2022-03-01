@@ -13,17 +13,17 @@ def get_score(count):
     return score
 
 
-def while_loop(number):
+def while_loop(number_of_grade):
     total = 0
     count = 0
-    while count < number:
-        print("Score")
+    while count < number_of_grade:
+        print("Score" + str(count + 1) + ":")
         score = float(input())
         total = total + score
         count = count + 1
-    average = total / number
+    average = total / number_of_grade
     average_result(average)
-    return total / number
+    return total / number_of_grade
     
  
 def average_result(average):
