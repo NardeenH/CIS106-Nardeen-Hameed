@@ -20,8 +20,8 @@ def process_grades(number_of_grades):
         score = get_realscore(count)
         total = total + score
         count = count + 1
-    average = total/number_of_grades
-    return total / number_of_grades
+    average = total / number_of_grades
+    return average
 
 
 def display_result(average):
