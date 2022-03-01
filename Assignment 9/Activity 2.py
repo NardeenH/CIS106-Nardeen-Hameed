@@ -1,8 +1,8 @@
-# Create a program that asks the user to enter grade:
+# Find the average of scores:
 
 
 def get_number():
-    print("Enter Number of score")
+    print("Enter Number of scores")
     number = int(input())        
     return number
 
@@ -16,7 +16,7 @@ def while_loop(number):
     total = 0
     count = 0
     while count < number:
-        print("Score" + str(count+ 1) + ":")
+        print("Score")
         score = float(input())
         total = total + score
         count = count + 1
