@@ -15,12 +15,12 @@ def get_end():
 
 def process_result(start, end):
     count = "  "
-    for row in range(start,end + 1):
-        count += str(row)+"   "
-    count += "\n" 
-    for row in range(start,end + 1):
+    for row in range(start, end + 1):
+        count += str(row) + "   "
+    count += "\n"  
+    for row in range(start, end + 1):
         count += str(row) + "  "
-        for column in range(start,end + 1):
+        for column in range(start, end + 1):
             count += str(row * column) + "  "
         count += "\n"    
     return count
