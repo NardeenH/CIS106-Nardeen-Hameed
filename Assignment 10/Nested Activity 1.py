@@ -16,7 +16,7 @@ def get_end():
 def process_result(start, end):
     count = "  "
     for row in range(start, end + 1):
-        count += str(row)+"   "
+        count += str(row) + "   "
     count += "\n" 
     for row in range(start, end + 1):
         count += str(row) + "  "
