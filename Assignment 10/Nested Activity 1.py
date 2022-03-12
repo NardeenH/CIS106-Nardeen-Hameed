@@ -16,8 +16,8 @@ def get_end():
 def process_result(start, end):
     count = "  "
     for row in range(start, end + 1):
-        count += str(row) + "   "
-    count += "\n"  
+        count += str(row)+"   "
+    count += "\n" 
     for row in range(start, end + 1):
         count += str(row) + "  "
         for column in range(start, end + 1):
@@ -34,7 +34,7 @@ def get_result(count):
 def main():
     start = get_start()
     end = get_end()
-    count = process_result(start,end)
+    count = process_result(start, end)
     get_result(count)
 
 
