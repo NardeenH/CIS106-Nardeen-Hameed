@@ -19,18 +19,8 @@ def doLoop(total, count):
     
     return total
 
-def getCount():
-    count = 0
-    
-    return count
-
-def getTotal():
-    total = 0
-    
-    return total
-
 # Main
 # Review MathsIsFun: Definition of Average. Create a program that asks the user to enter grade scores. Use a loop to request each score and add it to a total. Continue accepting scores until the user enters either a negative value or no value (your choice). Finally, calculate and display the average for the entered scores.
-total = getTotal()
-count = getCount()
+total = 0
+count = 0
 doLoop(total, count)

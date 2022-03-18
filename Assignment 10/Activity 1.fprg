@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-03-17 09:01:38 PM"/>
+        <attribute name="saved" value="2022-03-17 09:13:24 PM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDMtMDU7MTA6MTQ6MzcgQU07Mjg2NA=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDMtMTc7MDk6MDE6MzggUE07NzszMDAx"/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDMtMTc7MDk6MTM6MjQgUE07ODszMDAw"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -14,8 +14,8 @@
             <comment text="Review MathsIsFun: Definition of Average. Create a program that asks the user to enter grade scores. Use a loop to request each score and add it to a total. Continue accepting scores until the user enters either a negative value or no value (your choice). Finally, calculate and display the average for the entered scores."/>
             <declare name="total" type="Integer" array="False" size=""/>
             <declare name="count" type="Integer" array="False" size=""/>
-            <assign variable="total" expression="GetTotal()"/>
-            <assign variable="count" expression="GetCount()"/>
+            <assign variable="total" expression="0"/>
+            <assign variable="count" expression="0"/>
             <call expression="DoLoop(total, count)"/>
         </body>
     </function>
@@ -53,20 +53,6 @@
             <call expression="DisplayTotal(total, grade)"/>
             <assign variable="average" expression="total/(count-1)"/>
             <call expression="DisplayResult(average)"/>
-        </body>
-    </function>
-    <function name="GetCount" type="Integer" variable="count">
-        <parameters/>
-        <body>
-            <declare name="count" type="Integer" array="False" size=""/>
-            <assign variable="count" expression="0"/>
-        </body>
-    </function>
-    <function name="GetTotal" type="Integer" variable="total">
-        <parameters/>
-        <body>
-            <declare name="total" type="Integer" array="False" size=""/>
-            <assign variable="total" expression="0"/>
         </body>
     </function>
 </flowgorithm>
