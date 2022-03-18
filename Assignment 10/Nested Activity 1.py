@@ -26,16 +26,15 @@ def process_result(start, end):
     return count
 
 
-def get_result(count):
-    print(count)
-    return count
+def display_result(result):
+    print(result)
 
     
 def main():
     start = get_start()
     end = get_end()
-    count = process_result(start, end)
-    get_result(count)
+    result = process_result(start, end)
+    display_result(result)
 
 
 main()
