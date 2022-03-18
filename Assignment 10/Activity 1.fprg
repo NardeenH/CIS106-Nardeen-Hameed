@@ -4,14 +4,15 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-03-17 09:18:04 PM"/>
+        <attribute name="saved" value="2022-03-18 09:17:01 AM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDMtMDU7MTA6MTQ6MzcgQU07Mjg2NA=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDMtMTc7MDk6MTg6MDQgUE07OTszMDA0"/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDMtMTg7MDk6MTc6MDEgQU07MTA7MzAyNg=="/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
             <comment text="Review MathsIsFun: Definition of Average. Create a program that asks the user to enter grade scores. Use a loop to request each score and add it to a total. Continue accepting scores until the user enters either a negative value or no value (your choice). Finally, calculate and display the average for the entered scores."/>
+            <declare name="grade" type="Integer" array="False" size=""/>
             <declare name="total" type="Integer" array="False" size=""/>
             <declare name="count" type="Integer" array="False" size=""/>
             <assign variable="total" expression="0"/>
@@ -36,14 +37,21 @@
             <declare name="grade" type="Integer" array="False" size=""/>
             <declare name="average" type="Real" array="False" size=""/>
             <do expression="0 &lt;= grade">
-                <output expression="&quot; Enter your Grade, if you want to stop enter negative value.&quot;" newline="True"/>
-                <input variable="grade"/>
+                <assign variable="grade" expression="GetGrade()"/>
                 <assign variable="total" expression="total+grade"/>
                 <assign variable="count" expression="count+1"/>
             </do>
             <assign variable="total" expression="total-grade"/>
             <assign variable="average" expression="total/(count-1)"/>
             <call expression="DisplayResult(average)"/>
+        </body>
+    </function>
+    <function name="GetGrade" type="Integer" variable="grade">
+        <parameters/>
+        <body>
+            <declare name="grade" type="Integer" array="False" size=""/>
+            <output expression="&quot; Enter your Grade, if you want to stop enter negative value.&quot;" newline="True"/>
+            <input variable="grade"/>
         </body>
     </function>
 </flowgorithm>
