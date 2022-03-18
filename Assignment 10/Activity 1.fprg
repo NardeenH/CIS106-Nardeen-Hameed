@@ -4,9 +4,9 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="narde"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2022-03-17 09:13:24 PM"/>
+        <attribute name="saved" value="2022-03-17 09:18:04 PM"/>
         <attribute name="created" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDMtMDU7MTA6MTQ6MzcgQU07Mjg2NA=="/>
-        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDMtMTc7MDk6MTM6MjQgUE07ODszMDAw"/>
+        <attribute name="edited" value="bmFyZGU7REVTS1RPUC1KSlJEN0ZNOzIwMjItMDMtMTc7MDk6MTg6MDQgUE07OTszMDA0"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
@@ -27,15 +27,6 @@
             <output expression="&quot; The average is:&quot; &amp; average" newline="True"/>
         </body>
     </function>
-    <function name="DisplayTotal" type="None" variable="">
-        <parameters>
-            <parameter name="total" type="Integer" array="False"/>
-            <parameter name="grade" type="Integer" array="False"/>
-        </parameters>
-        <body>
-            <assign variable="total" expression="total-grade"/>
-        </body>
-    </function>
     <function name="DoLoop" type="Integer" variable="total">
         <parameters>
             <parameter name="total" type="Integer" array="False"/>
@@ -50,7 +41,7 @@
                 <assign variable="total" expression="total+grade"/>
                 <assign variable="count" expression="count+1"/>
             </do>
-            <call expression="DisplayTotal(total, grade)"/>
+            <assign variable="total" expression="total-grade"/>
             <assign variable="average" expression="total/(count-1)"/>
             <call expression="DisplayResult(average)"/>
         </body>

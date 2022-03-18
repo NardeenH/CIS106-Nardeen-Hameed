@@ -3,9 +3,6 @@ def displayResult(average):
     
     return average
 
-def displayTotal(total, grade):
-    total = total - grade
-
 def doLoop(total, count):
     while True:    #This simulates a Do Loop
         print(" Enter your Grade, if you want to stop enter negative value.")
@@ -13,7 +10,7 @@ def doLoop(total, count):
         total = total + grade
         count = count + 1
         if not(0 <= grade): break   #Exit loop
-    displayTotal(total, grade)
+    total = total - grade
     average = float(total) / (count - 1)
     displayResult(average)
     
