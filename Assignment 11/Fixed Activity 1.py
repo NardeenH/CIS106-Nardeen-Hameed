@@ -2,7 +2,7 @@
 
 
 def get_grade():
-    print('How many grade you want to put')
+    print('How many grade you want to put?')
     grade = int(input())
     return grade
 
@@ -15,13 +15,14 @@ def get_score(i):
 
 def get_scores(i):
     total = 0
-    for i in range(0, grade - 1 + 1, 1):
-        score = get_Score(i)
+    for i in range(0, (len(grade)) - 1 + 1, 1):
+        score = get_Score[i]
         total= total + score
     return total/grade
 
 
-def calculate_high():
+
+def calculate_high(score):
     hight = score[0]
     low = score[0]
     for i in range (grade):
@@ -30,11 +31,13 @@ def calculate_high():
     return hight
 
 
-def calculate_low():
+
+def calculate_low(score):
     for i in range(grade):
         if (score[i] < low):
             low = score[i]
     return low
+
 
 
 def display_result(average):
@@ -44,11 +47,16 @@ def display_result(average):
     
 def main():
     grade = get_grade()
-    print(grade)
-    # score= get_score(i)
-    # print('The highest grade is:', hight)
-    # print('The lowest grade is:', low)
-    # print('The average grade is:', average)
+    score= get_score(i)
+    average = average/ grade
 
 
 main()
+    
+
+
+
+    
+
+
+
