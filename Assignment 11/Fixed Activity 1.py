@@ -6,21 +6,22 @@ def get_grade():
     grade = int(input())
     return grade
 
-def get_RealScore(x):
-    print("Enter score" + str(x + 1) + ":");
+
+def get_Score(i):
+    print("Enter score" + str(i + 1) + ":")
     score = float(input())
     return score
 
-def for_array():
+def get_scores(i)
     total = 0
-    average = 0
-    score = [-1] * grade
-    for i in range(grade):
-      score[i] = int(flout('Enter score' + str(x + 1) + ':'))
-      average = avergae + score[i]
-    return score
-    
-def get_hight():
+    for i in range(0, grade - 1 + 1, 1):
+        score = get_Score(i)
+        total= total + score
+    return total/grade
+
+
+
+def calculate_high
     hight = score[0]
     low = score[0]
     for i in range (grade):
@@ -28,11 +29,15 @@ def get_hight():
             hight = score[i]
     return hight
 
-def get_low():
+
+
+def calculate_low():
     for i in range(grade):
         if (score[i] < low):
             low = score[i]
     return low
+
+
 
 def display_result(average):
         avrege = average/ grade
@@ -41,6 +46,7 @@ def display_result(average):
     
 def main():
     grade = get_grade()
+    score= get_score(i)
     print('The highest grade is:', hight)
     print('The lowest grade is:', low)
     print('The average grade is:', average)
