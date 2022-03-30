@@ -172,7 +172,7 @@ def check_file_contains(assignment, activity, file_extension,
         return
 
     text = read_file(path, filename).strip()
-    matches = re.findall(pattern, text, flags=re.IGNORECASE)
+    matches = re.findall(pattern, text, flags=re.DOTALL | re.IGNORECASE)
     assert len(matches) >= 1, \
         f"{assignment} {filename} {message}"
 
@@ -191,7 +191,7 @@ def check_file_does_not_contain(assignment, activity, file_extension,
         return
 
     text = read_file(path, filename).strip()
-    matches = re.findall(pattern, text, flags=re.IGNORECASE)
+    matches = re.findall(pattern, text, flags=re.DOTALL | re.IGNORECASE)
     assert len(matches) == 0, \
         f"{assignment} {filename} {message}\n" \
         f"Found: {matches}"

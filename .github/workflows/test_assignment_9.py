@@ -22,6 +22,15 @@ def test_assignment_9_activity_1_flowgorithm_comments():
     test.check_source_code_comments("Assignment 9", "Activity 1", 1, "fprg")
 
 
+def test_assignment_9_activity_1_flowgorithm_contains():
+    test.check_file_contains(
+        "Assignment 9",
+        "Activity 1",
+        "fprg",
+        "<while",
+        "Program must use a While loop.")
+
+
 def test_assignment_9_activity_1_flowgorithm_functions():
     test.check_flowgorithm_functions("Assignment 9", "Activity 1", 1, 1, 1)
 
@@ -33,6 +42,15 @@ def test_assignment_9_activity_1_flowgorithm_has_matching_source_code_file():
 
 def test_assignment_9_activity_1_source_code_comments():
     test.check_source_code_comments("Assignment 9", "Activity 1", 1)
+
+
+def test_assignment_9_activity_1_source_code_contains():
+    test.check_file_contains(
+        "Assignment 9",
+        "Activity 1",
+        "(cs|java|js|lua|py)",
+        r"\s+while",
+        "Program must use a While loop.")
 
 
 def test_assignment_9_activity_1_source_code_functions():
@@ -98,6 +116,15 @@ def test_assignment_9_activity_2_flowgorithm_comments():
     test.check_source_code_comments("Assignment 9", "Activity 2", 1, "fprg")
 
 
+def test_assignment_9_activity_2_flowgorithm_contains():
+    test.check_file_contains(
+        "Assignment 9",
+        "Activity 2",
+        "fprg",
+        "<while",
+        "Program must use a While loop.")
+
+
 def test_assignment_9_activity_2_flowgorithm_functions():
     test.check_flowgorithm_functions("Assignment 9", "Activity 2", 1, 1, 1)
 
@@ -109,6 +136,15 @@ def test_assignment_9_activity_2_flowgorithm_has_matching_source_code_file():
 
 def test_assignment_9_activity_2_source_code_comments():
     test.check_source_code_comments("Assignment 9", "Activity 2", 1)
+
+
+def test_assignment_9_activity_1_source_code_contains():
+    test.check_file_contains(
+        "Assignment 9",
+        "Activity 1",
+        "(cs|java|js|lua|py)",
+        r"\s+while",
+        "Program must use a While loop.")
 
 
 def test_assignment_9_activity_2_source_code_functions():
@@ -182,6 +218,15 @@ def test_assignment_9_activity_3_flowgorithm_comments():
     test.check_source_code_comments("Assignment 9", "Activity 3", 1, "fprg")
 
 
+def test_assignment_9_activity_3_flowgorithm_contains():
+    test.check_file_contains(
+        "Assignment 9",
+        "Activity 3",
+        "fprg",
+        "<while",
+        "Program must use a While loop.")
+
+
 def test_assignment_9_activity_3_flowgorithm_functions():
     test.check_flowgorithm_functions("Assignment 9", "Activity 3", 1, 1, 1)
 
@@ -193,6 +238,15 @@ def test_assignment_9_activity_3_flowgorithm_has_matching_source_code_file():
 
 def test_assignment_9_activity_3_source_code_comments():
     test.check_source_code_comments("Assignment 9", "Activity 3", 1)
+
+
+def test_assignment_9_activity_3_source_code_contains():
+    test.check_file_contains(
+        "Assignment 9",
+        "Activity 3",
+        "(cs|java|js|lua|py)",
+        r"\s+while",
+        "Program must use a While loop.")
 
 
 def test_assignment_9_activity_3_source_code_functions():

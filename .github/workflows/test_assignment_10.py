@@ -22,6 +22,15 @@ def test_assignment_10_activity_1_flowgorithm_comments():
     test.check_source_code_comments("Assignment 10", "Activity 1", 1, "fprg")
 
 
+def test_assignment_10_activity_1_flowgorithm_contains():
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 1",
+        "fprg",
+        "<do",
+        "Program must use a Do loop.")
+
+
 def test_assignment_10_activity_1_flowgorithm_functions():
     test.check_flowgorithm_functions("Assignment 10", "Activity 1", 1, 1, 1)
 
@@ -33,6 +42,29 @@ def test_assignment_10_activity_1_flowgorithm_has_matching_source_code_file():
 
 def test_assignment_10_activity_1_source_code_comments():
     test.check_source_code_comments("Assignment 10", "Activity 1", 1)
+
+
+def test_assignment_10_activity_1_source_code_contains():
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 1",
+        "py",
+        r"\s+while True:",
+        "Program must use a Do loop (while True:).")
+
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 1",
+        "(cs|java|js)",
+        r"\s+do *\{",
+        "Program must use a Do loop.")
+
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 1",
+        "lua",
+        r"\s+repeat",
+        "Program must use a Do loop (repeat...until).")
 
 
 def test_assignment_10_activity_1_source_code_functions():
@@ -101,6 +133,15 @@ def test_assignment_10_activity_2_flowgorithm_comments():
     test.check_source_code_comments("Assignment 10", "Activity 2", 1, "fprg")
 
 
+def test_assignment_10_activity_2_flowgorithm_contains():
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 2",
+        "fprg",
+        "<do",
+        "Program must use a Do loop.")
+
+
 def test_assignment_10_activity_2_flowgorithm_functions():
     test.check_flowgorithm_functions("Assignment 10", "Activity 2", 1, 1, 1)
 
@@ -112,6 +153,29 @@ def test_assignment_10_activity_2_flowgorithm_has_matching_source_code_file():
 
 def test_assignment_10_activity_2_source_code_comments():
     test.check_source_code_comments("Assignment 10", "Activity 2", 1)
+
+
+def test_assignment_10_activity_2_source_code_contains():
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 2",
+        "py",
+        r"\s+while True:",
+        "Program must use a Do loop (while True:).")
+
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 2",
+        "(cs|java|js)",
+        r"\s+do *\{",
+        "Program must use a Do loop.")
+
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 2",
+        "lua",
+        r"\s+repeat",
+        "Program must use a Do loop (repeat...until).")
 
 
 def test_assignment_10_activity_2_source_code_functions():
@@ -182,6 +246,15 @@ def test_assignment_10_activity_3_flowgorithm_comments():
     test.check_source_code_comments("Assignment 10", "Activity 3", 1, "fprg")
 
 
+def test_assignment_10_activity_3_flowgorithm_contains():
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 3",
+        "fprg",
+        "<do",
+        "Program must use a Do loop.")
+
+
 def test_assignment_10_activity_3_flowgorithm_functions():
     test.check_flowgorithm_functions("Assignment 10", "Activity 3", 1, 1, 1)
 
@@ -193,6 +266,29 @@ def test_assignment_10_activity_3_flowgorithm_has_matching_source_code_file():
 
 def test_assignment_10_activity_3_source_code_comments():
     test.check_source_code_comments("Assignment 10", "Activity 3", 1)
+
+
+def test_assignment_10_activity_3_source_code_contains():
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 3",
+        "py",
+        r"\s+while True:",
+        "Program must use a Do loop (while True:).")
+
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 3",
+        "(cs|java|js)",
+        r"\s+do *\{",
+        "Program must use a Do loop.")
+
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 3",
+        "lua",
+        r"\s+repeat",
+        "Program must use a Do loop (repeat...until).")
 
 
 def test_assignment_10_activity_3_source_code_functions():
@@ -227,6 +323,15 @@ def test_assignment_10_activity_4_flowgorithm_comments():
     test.check_source_code_comments("Assignment 10", "Activity 4", 1, "fprg")
 
 
+def test_assignment_10_activity_4_flowgorithm_contains():
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 4",
+        "fprg",
+        "<do",
+        "Program must use a Do loop.")
+
+
 def test_assignment_10_activity_4_flowgorithm_functions():
     test.check_flowgorithm_functions("Assignment 10", "Activity 4", 1, 1, 1)
 
@@ -238,6 +343,29 @@ def test_assignment_10_activity_4_flowgorithm_has_matching_source_code_file():
 
 def test_assignment_10_activity_4_source_code_comments():
     test.check_source_code_comments("Assignment 10", "Activity 4", 1)
+
+
+def test_assignment_10_activity_4_source_code_contains():
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 4",
+        "py",
+        r"\s+while True:",
+        "Program must use a Do loop (while True:).")
+
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 4",
+        "(cs|java|js)",
+        r"\s+do *\{",
+        "Program must use a Do loop.")
+
+    test.check_file_contains(
+        "Assignment 10",
+        "Activity 4",
+        "lua",
+        r"\s+repeat",
+        "Program must use a Do loop (repeat...until).")
 
 
 def test_assignment_10_activity_4_source_code_functions():
@@ -384,6 +512,15 @@ def test_assignment_10_nested_activity_2_flowgorithm_comments():
         "Assignment 10", "Nested Activity 2", 1, "fprg")
 
 
+def test_assignment_10_nested_activity_2_flowgorithm_contains():
+    test.check_file_contains(
+        "Assignment 10",
+        "Nested Activity 2",
+        "fprg",
+        "<do",
+        "Program must use a Do loop.")
+
+
 def test_assignment_10_nested_activity_2_flowgorithm_functions():
     test.check_flowgorithm_functions(
         "Assignment 10", "Nested Activity 2", 1, 1, 1)
@@ -397,6 +534,36 @@ def test_assignment_10_nested_activity_2_flowgorithm_has_matching_source_code_fi
 def test_assignment_10_nested_activity_2_source_code_comments():
     test.check_source_code_comments(
         "Assignment 10", "Nested Activity 2", 1)
+
+
+def test_assignment_10_nested_activity_2_source_code_contains():
+    test.check_file_contains(
+        "Assignment 10",
+        "Nested Activity 2",
+        "py",
+        r"\s+while True:",
+        "Program must use a Do loop (while True:).")
+
+    test.check_file_contains(
+        "Assignment 10",
+        "Nested Activity 2",
+        "(cs|java|js)",
+        r"\s+do *\{",
+        "Program must use a Do loop.")
+
+    test.check_file_contains(
+        "Assignment 10",
+        "Nested Activity 2",
+        "lua",
+        r"\s+repeat",
+        "Program must use a Do loop (repeat...until).")
+
+    test.check_file_contains(
+        "Assignment 10",
+        "Nested Activity 2",
+        "(cs|java|js|lua|py)",
+        r"\s+(for|while|repeat).+?\s+(for|while|repeat)",
+        "Program must use nested loops.")
 
 
 def test_assignment_10_nested_activity_2_source_code_functions():
