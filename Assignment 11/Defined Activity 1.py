@@ -24,7 +24,8 @@ def leap_year(year):
             
 def month_days(year, month):
     days = [0, 31, 28, 31, 30, 31, 30, 31, 30, 31, 30, 31]
-    months = ['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'June', 'Jul', 'Aug', 'Sep', 'Nov', 'Dec']
+    months = ['', 'January', 'Febwary', 'Mar', 'Apr',
+              'May', 'June', 'Jul', 'Aug', 'Sep', 'Nov', 'Dec']
     while month < 13 and month > 0:
       print(months[month], "has", days[month], "days:") 
       month = int(input())
