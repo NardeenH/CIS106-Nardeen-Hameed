@@ -8,7 +8,7 @@ def get_year():
 
 
 def get_month():
-    print(" Enter the month number")
+    print(" Enter the month in number")
     month = int(input())
     return month
 
@@ -18,14 +18,14 @@ def leap_year(year):
         print("The year", year, " is a leap year")
         return True
     else: 
-        print("the year", year, "is not a leap year")
+        print("The year", year, "is not a leap year")
         return False
             
             
 def month_days(year, month):
     days = [0, 31, 28, 31, 30, 31, 30, 31, 30, 31, 30, 31]
-    months = ['', 'January', 'Febwary', 'Mar', 'Apr',
-              'May', 'June', 'Jul', 'Aug', 'Sep', 'Nov', 'Dec']
+    months = ['', 'January', 'February', 'March', 'April', 'May',
+              'June', 'July', 'August', 'September', 'october', 'November', 'December']
     while month < 13 and month > 0:
       print(months[month], "has", days[month], "days:") 
       month = int(input())

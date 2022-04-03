@@ -1,6 +1,6 @@
 # Review MathsIsFun: Definition of Average.
 # I get some help from Tim.
-
+# I get some help from tutor.
 
 def get_grade():
     print('How many grade you want to put?')
