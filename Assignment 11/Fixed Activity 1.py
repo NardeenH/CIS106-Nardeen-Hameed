@@ -45,19 +45,17 @@ def calculate_low(score):
 def calculate_avg(score):
     total = 0
     for i in score:
-        total =total + i
+        total = total + i
     average = total / len(score)
     return average
     
     
 def main():
     grade = get_grade()
-    inputs= get_scores(grade)
+    inputs = get_scores(grade)
     hight = calculate_high(inputs)
     low = calculate_low(inputs)
     average = calculate_avg(inputs)
-    
-    
     print(" The Hight number is:  %d" % (hight))
     print(" The low number is:  %d" % (low))
     print(" The average number is:  %f" % (average))
