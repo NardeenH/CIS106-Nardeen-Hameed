@@ -9,14 +9,16 @@ def get_grade():
 
 
 def get_scores(grade):
+    count = 0
     array = [None] * int(grade)
     for i in range(len(array)):
-         array[i] = get_score()
+        array[i] = get_score(count)
+        count = count + 1
     return array
   
     
-def get_score():
-    print("Enter score:")
+def get_score(count):
+    print("Enter Score " + str(count + 1) + ": ")
     score = float(input())
     return score
 
@@ -58,7 +60,7 @@ def main():
     low = calculate_low(score)
     average = calculate_avg(score)
     for_result(hight, low, average)
-#     print(" The Hight number is:  %d" % (hight))
+#     print(" The High number is:  %d" % (hight))
 #     print(" The low number is:  %d" % (low))
 #     print(" The average number is:  %f" % (average))
 
