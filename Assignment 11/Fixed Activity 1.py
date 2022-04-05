@@ -1,6 +1,6 @@
 # Review MathsIsFun: Definition of Average.
 # I get some help from Tim.
-# I get some help from tutor.
+
 
 def get_grade():
     print('How many grade you want to put?')
@@ -8,8 +8,10 @@ def get_grade():
     return grade
 
 
-def grade_array(grade):
+def get_scores(grade):
     array = [None] * int(grade)
+    for i in range(len(array)):
+         array[i] = get_score()
     return array
   
     
@@ -17,13 +19,6 @@ def get_score():
     print("Enter score:")
     score = float(input())
     return score
-
-
-def get_scores(grade):
-    grades = []    
-    for i in range(grade):
-        grades.append(get_score())
-    return grades
 
 
 def calculate_high(score):
@@ -45,20 +40,29 @@ def calculate_low(score):
 def calculate_avg(score):
     total = 0
     for i in score:
-        total = total + i
+        total =total + i
     average = total / len(score)
     return average
+
+def for_result(hight, low, average):
+    print(" The Hight number is:  %d" % (hight))
+    print(" The low number is:  %d" % (low))
+    print(" The average number is:  %f" % (average))
     
     
 def main():
     grade = get_grade()
-    inputs = get_scores(grade)
+    inputs= get_scores(grade)
     hight = calculate_high(inputs)
     low = calculate_low(inputs)
     average = calculate_avg(inputs)
-    print(" The Hight number is:  %d" % (hight))
-    print(" The low number is:  %d" % (low))
-    print(" The average number is:  %f" % (average))
-   
+    for_result(hight, low, average)
+    
+    
+    
+#     print(" The Hight number is:  %d" % (hight))
+#     print(" The low number is:  %d" % (low))
+#     print(" The average number is:  %f" % (average))
+#    
    
 main()
