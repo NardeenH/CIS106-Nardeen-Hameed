@@ -16,6 +16,7 @@ def get_month():
 def leap_year(year):
     if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
         print("The year", year, " is a leap year")
+        days[2] = 29
         return True
     else: 
         print("The year", year, "is not a leap year")
@@ -29,7 +30,7 @@ def month_days(year, month):
               'October', 'November', 'December']
     while month < 13 and month > 0:
         print(months[month], "has", days[month], "days:") 
-        month = int(input())
+        month = int(input("\nEnter a month: "))
     return month
         
 
