@@ -50,11 +50,16 @@ def get_month_name(month):
 
             
 def main():
-    year = get_year()
-    month = get_month()
-    month_name = get_month_name(month)
-    month_days = get_month_days(month, year)
-    display_result(month_name, month_days)
+    while True:
+        year = get_year()
+        if year <= 0:
+            break
+        month = get_month()
+        if month < 1 or month > 12:
+            break   
+        month_name = get_month_name(month)
+        month_days = get_month_days(month, year)
+        display_result(month_name, month_days)
     
     
 main()
