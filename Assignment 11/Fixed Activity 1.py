@@ -3,7 +3,7 @@
 
 
 def get_grade():
-    print('How many grade you want to put?')
+    print('How many grades you want to put?')
     grade = int(input())
     return grade
 
@@ -47,7 +47,7 @@ def calculate_avg(score):
     return average
 
 
-def for_result(hight, low, average):
+def display_result(hight, low, average):
     print(" The Hight number is:  %d" % (hight))
     print(" The low number is:  %d" % (low))
     print(" The average number is:  %f" % (average))
@@ -56,13 +56,12 @@ def for_result(hight, low, average):
 def main():
     grade = get_grade()
     score = get_scores(grade)
+
     hight = calculate_high(score)
     low = calculate_low(score)
     average = calculate_avg(score)
-    for_result(hight, low, average)
-#     print(" The High number is:  %d" % (hight))
-#     print(" The low number is:  %d" % (low))
-#     print(" The average number is:  %f" % (average))
+
+    display_result(hight, low, average)
 
 
 main()
