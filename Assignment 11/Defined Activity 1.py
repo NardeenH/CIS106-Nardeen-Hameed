@@ -23,7 +23,8 @@ def leap_year(year):
             
             
 def display_result(month_name, month_days):
-     print(month_name, "has", month_days, "days:")
+    print(month_name, "has", month_days, "days:")
+    return month_name
 
 
 def get_month_days(month, year):
