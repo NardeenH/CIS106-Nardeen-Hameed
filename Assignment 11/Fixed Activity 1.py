@@ -18,7 +18,7 @@ def get_scores(grade):
   
     
 def get_score(count):
-    print("Enter Score " + str(count + 1) + ": ")
+    print("Score" + str(count + 1) + ": ")
     score = float(input())
     return score
 
@@ -56,12 +56,13 @@ def display_result(hight, low, average):
 def main():
     grade = get_grade()
     score = get_scores(grade)
-
     hight = calculate_high(score)
     low = calculate_low(score)
     average = calculate_avg(score)
-
     display_result(hight, low, average)
+#     print(" The High number is:  %d" % (hight))
+#     print(" The low number is:  %d" % (low))
+#     print(" The average number is:  %f" % (average))
 
 
 main()
