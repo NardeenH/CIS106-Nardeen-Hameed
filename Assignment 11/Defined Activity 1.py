@@ -9,7 +9,7 @@ def get_year():
 
 def get_month():
     print(" Enter the month in number")
-    month = int(input())
+    month = input(str())
     return month
 
 
@@ -32,7 +32,7 @@ def get_month_days(month, year):
         days[2] = 29
     else:
         days[2] = 28
-    month_days = days[month]
+    month_days = days[int(month)]
     return month_days
 
 
@@ -40,7 +40,7 @@ def get_month_name(month):
     months = ['', 'January', 'February', 'March', 'April', 'May',
                   'June', 'July', 'August', 'September',
                   'October', 'November', 'December']
-    month_name = months[month]
+    month_name = months[int(month)]
     return month_name
 
             
@@ -50,7 +50,7 @@ def main():
         if year <= 0:
             break
         month = get_month()
-        if month < 1 or month > 12:
+        if int(month) < 1 or int(month) > 12:
             break   
         month_name = get_month_name(month)
         month_days = get_month_days(month, year)
