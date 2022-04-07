@@ -24,7 +24,6 @@ def display_result(month_name, month_days, year):
     print(month_name + " " + str(year) + " has " + str(month_days) + " days.")
     
 
-
 def get_month_days(month, year):
     days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     leap = leap_year(year)
