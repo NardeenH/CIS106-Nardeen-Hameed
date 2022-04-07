@@ -15,15 +15,13 @@ def get_month():
 
 def leap_year(year):
     if (year % 4 == 0 and year % 100 != 0) or (year % 400 == 0):
-        print("The year", year, " is a leap year")
         return True
     else:
-        print("The year", year, "is not a leap year")
         return False
             
             
-def display_result(month_name, month_days):
-    print(month_name, "has", month_days, "days:")
+def display_result(month_name, month_days, year):
+    print(month_name + " " + str(year) + " has " + str(month_days) + " days.")
     return month_name
 
 
@@ -56,7 +54,7 @@ def main():
             break   
         month_name = get_month_name(month)
         month_days = get_month_days(month, year)
-        display_result(month_name, month_days)
+        display_result(month_name, month_days, year)
     
     
 main()
