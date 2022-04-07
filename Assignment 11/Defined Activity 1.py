@@ -22,11 +22,11 @@ def leap_year(year):
             
 def display_result(month_name, month_days, year):
     print(month_name + " " + str(year) + " has " + str(month_days) + " days.")
-    return month_name
+    
 
 
 def get_month_days(month, year):
-    days = [0, 31, 28, 31, 30, 31, 30, 31, 30, 31, 30, 31]
+    days = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     leap = leap_year(year)
     if leap:
         days[2] = 29
