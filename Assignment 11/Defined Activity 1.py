@@ -30,7 +30,7 @@ def display_result(month_name, month_days):
 def get_month_days(month, year):
     days = [0, 31, 28, 31, 30, 31, 30, 31, 30, 31, 30, 31]
     leap = leap_year(year)
-    if leap == True:
+    if leap:
         days[2] = 29
     else:
         days[2] = 28
