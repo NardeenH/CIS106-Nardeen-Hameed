@@ -9,7 +9,7 @@ def get_year():
 
 def get_month():
     print(" Enter the month in number")
-    month = input(str())
+    month = int(input(str()))
     return month
 
 
@@ -29,9 +29,7 @@ def get_month_days(month, year):
     leap = leap_year(year)
     if leap:
         days[2] = 29
-    else:
-        days[2] = 28
-    month_days = days[int(month)]
+    month_days = days[month]
     return month_days
 
 
@@ -48,13 +46,14 @@ def main():
         year = get_year()
         if year <= 0:
             break
+
         month = get_month()
-        if int(month) < 1 or int(month) > 12:
+        if month < 1 or month > 12:
             break   
+
         month_name = get_month_name(month)
         month_days = get_month_days(month, year)
         display_result(month_name, month_days, year)
     
     
 main()
-           
