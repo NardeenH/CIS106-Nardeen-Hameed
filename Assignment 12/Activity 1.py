@@ -1,8 +1,10 @@
 # Assinment 12,
-#If your programming language supports it,
-#update the grade score program above to replace the static array with a dynamic array,
-#and extend the array as each item is added to the array.
-#Continue accepting scores until the user enters a negative value.
+# If your programming language supports it,
+# update the grade score program above to
+# replace the static array with a dynamic array,
+# and extend the array as each item is added to the array.
+# Continue accepting scores until the user enters a negative value.
+
 
 def get_grade():
     print('Enter score, to stop enter negitve value:')
@@ -43,11 +45,11 @@ def calculate_min(array):
     return minimum
     
     
-def calculate_average(score):
-    total =0
-    for i in score:
-        total =total +i
-    average = total / len(score)
+def calculate_average(array):
+    total = 0
+    for i in range(len(array)):
+        total = total + array[i]
+    average = total / int(array[i])
     return average
   
     
@@ -68,8 +70,3 @@ def main():
    
 main()
     
-    
-
-
-
-
