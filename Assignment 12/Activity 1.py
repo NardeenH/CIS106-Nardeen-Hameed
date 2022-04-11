@@ -1,69 +1,75 @@
+# Assinment 12,
+#If your programming language supports it,
+#update the grade score program above to replace the static array with a dynamic array,
+#and extend the array as each item is added to the array.
+#Continue accepting scores until the user enters a negative value.
+
 def get_grade():
-    print('How many grade you want to put?')
+    print('Enter score, to stop enter negitve value:')
     grade = int(input())
     return grade
 
-def grade_array(grade):
-    array = [None] * int(grade)
-    return array
-
 
 def get_score():
-    print("Enter score:")
-    score = float(input())
+    print(" Enter Score:")
+    score = int(input())
     return score
 
 
 def get_scores(grade):
-    grades = []    
-    for i in range(grade):
-        grades.append(get_score())
-    return grades
+    array = [None] * grade
+    for i in range(len(array)):
+        array = []
+    while (True):
+        array.append(get_score())
+        if array[-1] < 0:
+            break
+    return array
+    
+
+def calculate_max(array):
+    maximum = array[0]
+    for i in range(len(array)):
+        if maximum < array[i]:
+            maximum = array[i]
+    return maximum
 
 
-
-def calculate_high(score):
-    hight = score[0]
-    low = score[0]
-    for i in score:
-        if (i > hight):
-            hight = i
-    return hight
-
-
-
-def calculate_low(score):
-    low = score[0]
-    for i in score:
-        if (i < low):
-            low = i
-    return low
-
-
-
-def calculate_avg(score):
+def calculate_min(array):
+    minimum = array[0]
+    for i in range(len(array)):
+        if minimum > array[i]:
+            minimum = array[i]
+    return minimum
+    
+    
+def calculate_average(score):
     total =0
     for i in score:
         total =total +i
     average = total / len(score)
     return average
-
-def display_result(hight, low, average):
-    print(" The Hight number is:  %d" % (hight))
-    print(" The low number is:  %d" % (low))
+  
+    
+def display_result(maximum, minimum, average):
+    print(" The Highest number is:  %d" % (maximum))
+    print(" The lowest number is:  %d" % (minimum))
     print(" The average number is:  %f" % (average))
-
-
-
+    
+    
 def main():
     grade = get_grade()
-    inputs= get_scores(grade)
-    hight = calculate_high(inputs)
-    low = calculate_low(inputs)
-    average = calculate_avg(inputs)
-    display_result(hight, low, average)
-
-
-  
-
+    score = get_scores(grade)
+    maximum = calculate_max(score)
+    minimum = calculate_min(score)
+    average = calculate_average(score)
+    display_result(maximum, minimum, average)
+   
+   
 main()
+    
+    
+
+
+
+
