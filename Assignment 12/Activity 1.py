@@ -7,10 +7,9 @@
 
 
 def get_grade():
-    print('Enter score, to stop enter negitve value:')
+    print(" Enter your Grade, if you want to stop enter negative value.")
     grade = int(input())
     return grade
-
 
 def get_score():
     print(" Enter Score:")
@@ -19,12 +18,16 @@ def get_score():
 
 
 def get_scores(grade):
-    grades = []
+    scores = []
     while True:
-        grades.append(get_score())
-        if grade <= 0:
+        score = get_score()
+        if score >= 0:
+            scores.append(score)
+            
+        else:
             break
-    return grades
+    return scores
+    
     
 
 def calculate_max(array):
@@ -58,7 +61,7 @@ def display_result(maximum, minimum, average):
     
     
 def main():
-    grade = get_grade()
+    grade = get_grade()    
     score = get_scores(grade)
     maximum = calculate_max(score)
     minimum = calculate_min(score)
