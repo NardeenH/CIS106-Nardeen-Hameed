@@ -19,14 +19,12 @@ def get_score():
 
 
 def get_scores(grade):
-    array = [None] * grade
-    for i in range(len(array)):
-        array = []
-    while (True):
-        array.append(get_score())
-        if array[-1] < 0:
+    grades = []
+    while True:
+        grades.append(get_score())
+        if grade <= 0:
             break
-    return array
+    return grades
     
 
 def calculate_max(array):
