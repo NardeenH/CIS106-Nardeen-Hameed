@@ -6,12 +6,6 @@
 # Continue accepting scores until the user enters a negative value.
 
 
-# def get_grade():
-# print(" Enter your Scores, if you want to stop enter negative value.")
-# grade = int(input())
-# return grade
-
-
 def get_score():
     print(" Enter Score, to end it enter negitve value:")
     score = int(input())
