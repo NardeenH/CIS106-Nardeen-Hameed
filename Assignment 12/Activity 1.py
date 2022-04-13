@@ -18,7 +18,7 @@ def get_score():
     return score
 
 
-def get_scores(score):
+def get_scores():
     scores = []
     while True:
         score = get_score()
@@ -59,13 +59,13 @@ def display_result(maximum, minimum, average):
     print(" The average number is:  %f" % (average))
     
     
-def main():
-    score = get_score()    
-    score = get_scores(score)
+def main():    
+    score = get_scores()
     maximum = calculate_max(score)
     minimum = calculate_min(score)
     average = calculate_average(score)
     display_result(maximum, minimum, average)
+    
    
    
 main()
