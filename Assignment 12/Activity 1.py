@@ -66,7 +66,6 @@ def main():
     average = calculate_average(score)
     display_result(maximum, minimum, average)
     
-   
-   
+     
 main()
     
