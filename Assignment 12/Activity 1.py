@@ -60,7 +60,6 @@ def display_result(maximum, minimum, average):
     
     
 def main():
-# grade = get_grade()
     score = get_score()    
     score = get_scores(score)
     maximum = calculate_max(score)
