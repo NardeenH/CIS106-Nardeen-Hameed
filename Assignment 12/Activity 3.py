@@ -47,10 +47,11 @@ def calculate_average(scores):
     return average
   
     
-def display_result(maximum, minimum, average):
-    print(" The Highest number is: %d" % (maximum))
-    print(" The lowest number is: %d" % (minimum))
-    print(" The average number is: %f" % (average))
+def display_result(score, maximum, minimum, average):
+    print(score)
+    print(f"The Highest number is: {maximum}")
+    print(f"The lowest number is: {minimum}")
+    print(f"The average number is: {average}")
     
     
 def main():  
@@ -59,8 +60,7 @@ def main():
     minimum = calculate_min(score)
     average = calculate_average(score)
     score.sort(reverse=True)
-    print(score)
-    display_result(maximum, minimum, average)
+    display_result(score, maximum, minimum, average)
     
     
 main()

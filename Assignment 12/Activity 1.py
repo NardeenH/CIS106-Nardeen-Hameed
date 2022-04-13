@@ -48,9 +48,9 @@ def calculate_average(scores):
   
     
 def display_result(maximum, minimum, average):
-    print(" The Highest number is:  %d" % (maximum))
-    print(" The lowest number is:  %d" % (minimum))
-    print(" The average number is:  %f" % (average))
+    print(f"The Highest number is: {maximum}")
+    print(f"The lowest number is: {minimum}")
+    print(f"The average number is: {average}")
     
     
 def main():    
