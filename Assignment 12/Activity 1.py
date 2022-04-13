@@ -6,51 +6,50 @@
 # Continue accepting scores until the user enters a negative value.
 
 
-def get_grade():
-    print(" Enter your Grade, if you want to stop enter negative value.")
-    grade = int(input())
-    return grade
+# def get_grade():
+#     print(" Enter your Scores, if you want to stop enter negative value.")
+#     grade = int(input())
+#     return grade
+
 
 def get_score():
-    print(" Enter Score:")
+    print(" Enter Score, to end it enter negitve value:")
     score = int(input())
     return score
 
 
-def get_scores(grade):
+def get_scores(score):
     scores = []
     while True:
         score = get_score()
         if score >= 0:
-            scores.append(score)
-            
+            scores.append(score) 
         else:
             break
     return scores
     
-    
 
-def calculate_max(array):
-    maximum = array[0]
-    for i in range(len(array)):
-        if maximum < array[i]:
-            maximum = array[i]
+def calculate_max(scores):
+    maximum = scores[0]
+    for i in range(len(scores)):
+        if maximum < scores[i]:
+            maximum = scores[i]
     return maximum
 
 
-def calculate_min(array):
-    minimum = array[0]
-    for i in range(len(array)):
-        if minimum > array[i]:
-            minimum = array[i]
+def calculate_min(scores):
+    minimum = scores[0]
+    for i in range(len(scores)):
+        if minimum > scores[i]:
+            minimum = scores[i]
     return minimum
     
     
-def calculate_average(array):
+def calculate_average(scores):
     total = 0
-    for i in range(len(array)):
-        total = total + array[i]
-    average = total / int(array[i])
+    for i in scores:
+        total = total + i
+    average = total / len(scores)
     return average
   
     
@@ -61,8 +60,9 @@ def display_result(maximum, minimum, average):
     
     
 def main():
-    grade = get_grade()    
-    score = get_scores(grade)
+#   grade = get_grade()
+    score = get_score()    
+    score = get_scores(score)
     maximum = calculate_max(score)
     minimum = calculate_min(score)
     average = calculate_average(score)
