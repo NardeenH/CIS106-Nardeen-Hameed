@@ -7,9 +7,9 @@
 
 
 # def get_grade():
-#     print(" Enter your Scores, if you want to stop enter negative value.")
-#     grade = int(input())
-#     return grade
+# print(" Enter your Scores, if you want to stop enter negative value.")
+# grade = int(input())
+# return grade
 
 
 def get_score():
@@ -60,7 +60,7 @@ def display_result(maximum, minimum, average):
     
     
 def main():
-#   grade = get_grade()
+# grade = get_grade()
     score = get_score()    
     score = get_scores(score)
     maximum = calculate_max(score)
