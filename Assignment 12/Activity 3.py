@@ -6,12 +6,6 @@
 # Continue accepting scores until the user enters a negative value.
 
 
-# def get_grade():
-# print(" Enter your Scores, if you want to stop enter negative value.")
-# grade = int(input())
-# return grade
-
-
 def get_score():
     print(" Enter Score, to end it enter negitve value:")
     score = int(input())
@@ -54,9 +48,9 @@ def calculate_average(scores):
   
     
 def display_result(maximum, minimum, average):
-    print(" The Highest number is:  %d" % (maximum))
-    print(" The lowest number is:  %d" % (minimum))
-    print(" The average number is:  %f" % (average))
+    print(" The Highest number is: %d" % (maximum))
+    print(" The lowest number is: %d" % (minimum))
+    print(" The average number is: %f" % (average))
     
     
 def main():  
@@ -70,4 +64,3 @@ def main():
     
     
 main()
-    
