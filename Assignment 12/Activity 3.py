@@ -69,7 +69,6 @@ def main():
     print(score)
     display_result(maximum, minimum, average)
     
-   
-   
+    
 main()
     
