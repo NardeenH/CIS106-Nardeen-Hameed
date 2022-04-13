@@ -64,7 +64,7 @@ def main():
     maximum = calculate_max(score)
     minimum = calculate_min(score)
     average = calculate_average(score)
-    score.sort()
+    score.reverse()
     print(score)
     display_result(maximum, minimum, average)
     
