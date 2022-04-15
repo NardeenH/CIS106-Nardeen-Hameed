@@ -5,17 +5,26 @@
 # Use separate subroutines/functions/methods to implement input, each type of processing, and output. Avoid global variables by passing parameters and returning results.
 
 def get_text():
-    print("Enter your text:\n")
+    print("Enter your text:")
     text = str(input())
     return text
 
-def deulicate(text):
-    print(text[::-1])
+
+def remove_spaces(text):
+    import re
+    text2 = text
+    print(re.sub(' +', ' ',text))
+    return text2
+    
+
+def backwardes(text):
+    print((text[::-1]))
     
 
 def main():
     text = get_text()
-    print(text[::-1])
-    
+    remove_spaces(text)
+    backwardes(text)
+      
     
 main()
