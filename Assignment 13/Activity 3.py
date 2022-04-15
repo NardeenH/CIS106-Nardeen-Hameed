@@ -18,7 +18,7 @@ def get_text():
 def remove_spaces(text):
     import re
     text2 = text
-    print(re.sub(' +', ' ',text))
+    print(re.sub(' +', ' ', text))
     return text2
     
 
