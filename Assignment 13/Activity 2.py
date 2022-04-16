@@ -1,35 +1,37 @@
-# Assainment 13, Actvity 3
-# # Create a program that asks the user for a line of text.
-# Use string functions/methods to delete leading, trailing, and duplicate spaces,
-# and then print the line of text backwards. For example:
-#       the   cat   in   the   hat  
-#     tah eht ni tac eht
-# Use separate subroutines/functions/methods to implement input, each type of processing,
-# and output. Avoid global variables by passing parameters and returning results.
+# Assainment 13, Actvity2
+# Use string functions/methods to delete leading, trailing,
+# and duplicate spaces, and then print the line of text backwards.
 # https://www.datasciencemadesimple.com/remove-spaces-in-python/
 
 
 def get_text():
-    print("Enter your text:\n")
+    print("Enter Text:")
     text = str(input())
     return text
 
 
 def remove_spaces(text):
-    import re
+    text1 = text
+    text1 = text.lstrip()
+    return text1
+
+
+def backwards_text(text):
     text2 = text
-    print(re.sub(' +', ' ', text))
+    text2 = (text[::-1])
     return text2
     
 
-def backwardes(text):
+def output_result(text):
+    print(text.lstrip())
     print((text[::-1]))
     
 
 def main():
     text = get_text()
-    remove_spaces(text)
-    backwardes(text)
+    text1 = remove_spaces(text)
+    text2 = backwards_text(text)
+    output_result(text)
       
     
 main()
