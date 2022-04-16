@@ -10,15 +10,15 @@ def get_text():
 
 
 def remove_spaces(text):
-    removespace = text
-    removespace = text.lstrip()
-    return 
+    textOne = text
+    textOne  = text.lstrip()
+    return textOne 
 
 
 def backwards_text(text):
-    backwords = text
-    backwords = (text[::-1])
-    return backwords
+    textTwo = text
+    textTwo = (text[::-1])
+    return textTwo
     
 
 def output_result(text):
@@ -28,8 +28,8 @@ def output_result(text):
 
 def main():
     text = get_text()
-    removespace = remove_spaces(text)
-    backwords = backwards_text(text)
+    textone = remove_spaces(text)
+    textTwo = backwards_text(text)
     output_result(text)
       
     
