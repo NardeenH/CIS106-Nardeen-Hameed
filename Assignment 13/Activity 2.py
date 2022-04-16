@@ -5,21 +5,20 @@
 
 
 def get_text():
-    print("Enter Text:")
-    text = str(input())
+    text = input("Enter Text:")
     return text
 
 
 def remove_spaces(text):
-    text1 = text
-    text1 = text.lstrip()
-    return text1
+    i = text
+    i = text.lstrip()
+    return i
 
 
 def backwards_text(text):
-    text2 = text
-    text2 = (text[::-1])
-    return text2
+    x = text
+    x = (text[::-1])
+    return x
     
 
 def output_result(text):
@@ -29,8 +28,8 @@ def output_result(text):
 
 def main():
     text = get_text()
-    text1 = remove_spaces(text)
-    text2 = backwards_text(text)
+    i = remove_spaces(text)
+    x = backwards_text(text)
     output_result(text)
       
     
