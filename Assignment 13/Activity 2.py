@@ -8,6 +8,7 @@ def get_text():
     text = input("Enter Text\n")
     return text
 
+
 # def text_strip(text):
 #     s = text.strip()
 #     return s
@@ -25,14 +26,13 @@ def get_text():
 
 
 def backwards_text(text):
-#     x = ' '.join(text.split())
-    x = (text[::-1])
-    return x
+    txt = (text[::-1])
+    return txt
     
     
 def remove_space(text):
-    x = ' '.join(text.split())
-    return x
+    txt = ' '.join(text.split())
+    return txt
 
 
 def output_result(text):
@@ -44,10 +44,9 @@ def main():
 #     i = remove_spaces(text)
 #     s = text.strip(text)
 #     d = get_split(text)
-    x = remove_space(text)
-    x = backwards_text(x)
-    output_result(x)
+    txt = remove_space(text)
+    txt = backwards_text(txt)
+    output_result(txt)
 
-      
-    
+        
 main()
