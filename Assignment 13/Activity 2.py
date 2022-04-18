@@ -5,32 +5,49 @@
 
 
 def get_text():
-    text = input("Enter Text:\n")
+    text = input("Enter Text\n")
     return text
 
+# def text_strip(text):
+#     s = text.strip()
+#     return s
 
-def remove_spaces(text):
-    delete_space = text
-    delete_space = text.lstrip()
-    return delete_space
+# 
+# def get_split(text):
+#     d = ' '.join(text.split())
+#     return d
+
+#     i = text
+#     if '  ' in text:
+#         while '  ' in text:
+#             text = text.replace('  ', ' ')
+#     return i
 
 
 def backwards_text(text):
-    reverse_words = text
-    reverse_words = (text[::-1])
-    return reverse_words
+#     x = ' '.join(text.split())
+    x = (text[::-1])
+    return x
     
+    
+def remove_space(text):
+    x = ' '.join(text.split())
+    return x
+
 
 def output_result(text):
-#     print(text.lstrip())
-    print((text[::-1]))
+    print(text)
     
 
 def main():
     text = get_text()
-    delete_space = remove_spaces(text)
-    reverse_words = backwards_text(text)
-    output_result(text)
+#     i = remove_spaces(text)
+#     s = text.strip(text)
+#     d = get_split(text)
+    x = remove_space(text)
+    x = backwards_text(x)
+    output_result(x)
+
       
     
 main()
