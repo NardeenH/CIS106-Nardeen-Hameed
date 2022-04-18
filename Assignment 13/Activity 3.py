@@ -2,7 +2,7 @@
 
 
 def get_text():
-    text = input('Enter last with comma: ')
+    text = input('Enter text with comma: ')
     return text
 
 
