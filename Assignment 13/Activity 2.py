@@ -2,10 +2,11 @@
 # Use string functions/methods to delete leading, trailing,
 # and duplicate spaces, and then print the line of text backwards.
 # https://www.datasciencemadesimple.com/remove-spaces-in-python/
+# https://www.youtube.com/watch?v=DYc0AKF0Qmc&t=693s
 
 
 def get_text():
-    text = input("Enter Text\n")
+    text = input("Enter line of Text\n")
     return text
 
 
