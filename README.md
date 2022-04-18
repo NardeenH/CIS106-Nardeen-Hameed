@@ -42,4 +42,4 @@ This season, you learned how to use dynamic programming, "a data structure with 
 
 ## Assignment 13
 In this season I learned how to use String methods. Python has several functions built into it to handle strings. These functions allow us to easily modify and perform operations on strings. You can think of functions as "actions" that we can perform on elements in the code. Built-in functions are functions that are defined within the Python language and are directly ready for use. For example, the str.upper() and str.lower() functions will return the string after converting the case of all its original characters to uppercase or lowercase (respectively and in order). Since we are unable to modify the text string after creating it, a new one will be returned. Any non-Latin characters in the original string will not be modified and will remain unchanged. There are many other functions under the link https://www.w3schools.com/python/python_strings_methods.asp.
-I intend to apply this learning to correct and disassemble texts, especially in Arabic texts.
+I intend to apply this learning to correct and disassemble texts, especially in arabic texts.
