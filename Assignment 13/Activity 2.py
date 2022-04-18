@@ -5,31 +5,31 @@
 
 
 def get_text():
-    text = input("Enter Text:")
+    text = input("Enter Text:\n")
     return text
 
 
 def remove_spaces(text):
-    one = text
-    one  = text.lstrip()
-    return one 
+    delete_space = text
+    delete_space = text.lstrip()
+    return delete_space
 
 
 def backwards_text(text):
-    two = text
-    two = (text[::-1])
-    return two
+    reverse_words = text
+    reverse_words = (text[::-1])
+    return reverse_words
     
 
 def output_result(text):
-    print(text.lstrip())
+#     print(text.lstrip())
     print((text[::-1]))
     
 
 def main():
     text = get_text()
-    one = remove_spaces(text)
-    two = backwards_text(text)
+    delete_space = remove_spaces(text)
+    reverse_words = backwards_text(text)
     output_result(text)
       
     
