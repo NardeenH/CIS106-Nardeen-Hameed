@@ -4,8 +4,7 @@
 def read_file(filename):
     blok = []
     item = []
-    with open (filename, 'r') as file:
-        
+    with open(filename, 'r') as file:
         for line in file:
             line = line.strip()
             if line != "":
@@ -28,13 +27,12 @@ def process_line(line):
     address = line[1]
     city = line[2].split(",")[0]
     postal_code = line[2].split(",")[1]
-    return "{0}, {1}, {2}, {3}, {4}".format(lastname,
+    return "{0}, {1}, {2}, {3},{4}".format(lastname,
                                             firstname, address, city, postal_code)
-#      outline(lastname, firstname, address, city, postal_code)
 
 
 def the_outline(text):
-     print(text)
+    print(text)
     
 
 def main():

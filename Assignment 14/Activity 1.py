@@ -3,7 +3,7 @@
 
 def file_read(filename):
     scores = []
-    with open (filename, 'r') as file:
+    with open(filename, 'r') as file:
         item = 0
         for line in file:
             if item > 0:
