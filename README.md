@@ -45,5 +45,5 @@ In this season I learned how to use String methods. There are several functions 
 I intend to apply this learning to correct and disassemble texts, especially in Arabic texts.
 
 ## Assignment 14
-This season I learned how to use and add files to Python. For example, you can create text in a file and then save it. When you write code, you don't need to write text, but you can call the text into Python and python can read the file( there are many ways how to call the text. you can see it under the link https://www.w3schools.com/python/python_file_handling.asp ). Then, adding functions or methods will help you change lines of text, delete lines, add a space, and whatever you want to change.
+This season I learned how to use and add files to python. For example, you can create text in a file and then save it. When you write code, you don't need to write text, but you can call the text into Python and python can read the file( there are many ways how to call the text. you can see it under the link https://www.w3schools.com/python/python_file_handling.asp ). Then, adding functions or methods will help you change lines of text, delete lines, add a space, and whatever you want to change.
 I intend to apply this learning to my learning objectives of how to read the content of a file, how to make a copy of the file, how to modify files, how to delete etc.
