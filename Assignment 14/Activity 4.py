@@ -2,7 +2,7 @@
     
     
 def read_file(filename):
-    blok= []
+    blok = []
     item = []
     with open (filename, 'r') as file:
         
@@ -18,18 +18,23 @@ def read_file(filename):
     return blok
 
 
-def outline(text):
-     print(text)
+# def outline(text):
+#     print(text)
         
         
 def process_line(line):
-     firstname = line[0].split()[0]
-     lastname = line[0].split()[1]
-     address = line[1]
-     city = line[2].split(",")[0]
-     postal_code = line[2].split(",")[1]
-     return "{0},{1},{2},{3},{4}".format(lastname, firstname, address, city, postal_code)
+    firstname = line[0].split()[0]
+    lastname = line[0].split()[1]
+    address = line[1]
+    city = line[2].split(",")[0]
+    postal_code = line[2].split(",")[1]
+    return "{0}, {1}, {2}, {3}, {4}".format(lastname,
+                                            firstname, address, city, postal_code)
 #      outline(lastname, firstname, address, city, postal_code)
+
+
+def the_outline(text):
+     print(text)
     
 
 def main():
@@ -37,7 +42,7 @@ def main():
     blok = read_file(filename)    
     for line in blok:
         text = process_line(line)
-        outline(text)
+        the_outline(text)
   
         
 main()

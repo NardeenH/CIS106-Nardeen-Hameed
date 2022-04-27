@@ -4,12 +4,12 @@
 def file_read(filename):
     scores = []
     with open (filename, 'r') as file:
-        i=0
+        item = 0
         for line in file:
-            if i>0:
+            if item > 0:
                 score = line.split(',')
                 scores.append(int(score[1]))
-            i+=1
+            item += 1
         file.close()
     return scores
     
