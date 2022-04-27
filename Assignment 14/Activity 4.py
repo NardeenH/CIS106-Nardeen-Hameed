@@ -27,8 +27,8 @@ def process_line(line):
     address = line[1]
     city = line[2].split(",")[0]
     postal_code = line[2].split(",")[1]
-    return "{0}, {1}, {2}, {3},{4}".format(lastname,
-                                            firstname, address, city, postal_code)
+    return "{0}, {1}, {2}, {3}, {4}".format(lastname,
+            firstname, address, city, postal_code)
 
 
 def the_outline(text):
