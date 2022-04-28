@@ -28,7 +28,7 @@ def process_line(line):
     city = line[2].split(",")[0]
     state = line[2].split(",")[1].split()[0]
     code = line[2].split(",")[1].split()[1]
-    return "{0}, {1}, {2}, {3}, {4},{5}".format(lastname,
+    return "{0}, {1}, {2}, {3}, {4}, {5}".format(lastname,
             firstname, address, city, state, code)
 
 
