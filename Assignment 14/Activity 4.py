@@ -11,14 +11,9 @@ def read_file(filename):
                 item.append(line)
             else:                
                 blok.append(item)
-                item = []
-        blok.append(item)       
+                item = []      
         file.close()
     return blok
-
-
-# def outline(text):
-#     print(text)
         
         
 def process_line(line):
