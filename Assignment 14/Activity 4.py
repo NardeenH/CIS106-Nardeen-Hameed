@@ -33,7 +33,7 @@ def the_outline(text):
 
 def main():
     filename = "addresses.txt"
-    blok = read_file(filename)    
+    block = read_file(filename)    
     for line in block:
         text = process_line(line)
         the_outline(text)
