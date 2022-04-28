@@ -2,7 +2,7 @@
     
     
 def read_file(filename):
-    blok = []
+    block = []
     item = []
     with open(filename, 'r') as file:
         for line in file:
@@ -10,10 +10,10 @@ def read_file(filename):
             if line != "":
                 item.append(line)
             else:                
-                blok.append(item)
+                block.append(item)
                 item = []      
         file.close()
-    return blok
+    return block
         
         
 def process_line(line):
@@ -34,7 +34,7 @@ def the_outline(text):
 def main():
     filename = "addresses.txt"
     blok = read_file(filename)    
-    for line in blok:
+    for line in block:
         text = process_line(line)
         the_outline(text)
   
