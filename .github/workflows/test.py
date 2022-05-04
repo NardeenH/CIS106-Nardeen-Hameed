@@ -1658,8 +1658,8 @@ def get_javascript_functions(path, filename):
             if function_text.count("}") > function_text.count("{"):
                 function_text = re.sub("}$", "", function_text).strip()
 
-        function_text = re.sub("}.+?$", "", function_text, flags=re.DOTALL)
-        function["text"] = function_text
+        function_text = re.sub(r"if \(typeof alert.+?$", "", function_text, flags=re.DOTALL)
+        function["text"] = function_text.strip()
         functions.append(function)
 
     pattern = r"^\s*(\w+\s*=\s*)?(\w+)\(.*?\)"
@@ -1681,7 +1681,7 @@ def get_javascript_functions(path, filename):
             function["type"] = "main"
         elif "prompt" in function["text"]:
             function["type"] = "input"
-        elif "alert" in function["text"]:
+        elif "alert" in function["text"] or "console.log" in function["text"]:
             function["type"] = "output"
         else:
             function["type"] = "processing"
@@ -1921,9 +1921,9 @@ def read_file(path, filename):
 
 
 if __name__ == "__main__":
-    check_git_log(
-        "Assignment 2",
-        "hello.+?world",
-        "Git log is missing required \"Hello world!\" text. "
-            "You must commit Activity 1 changes before working on "
-            "Activity 2.")
+    path = "/Users/davebraunschweig/Downloads/Grading/cis106-paulina-segovia/Assignment 11"
+    filename = "Defined Activity #1.js"
+    functions = get_javascript_functions(path, filename)
+    for function in functions:
+        print(function)
+        print("\n")
