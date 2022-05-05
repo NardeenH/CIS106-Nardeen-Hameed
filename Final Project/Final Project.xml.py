@@ -10,6 +10,7 @@ def read_url(filename):
 
 def process_item(xml_page): 
     items = []
+    print("Title", 'Artist', 'Country', 'Price', 'Year')
     for item in xml_page.iter('CD'):
         items.append({
             "title" : item.find('TITLE').text,
@@ -19,7 +20,6 @@ def process_item(xml_page):
             "year" : item.find('YEAR').text
             })
     for element in items:
-        print("Title", 'Artist', 'Country', 'Price', 'Year')
         print((element['title'], element['artist'], element['country'], element['price'], element['year']))
     return items
 #def read_file(filename):
