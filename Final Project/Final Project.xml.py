@@ -3,7 +3,6 @@
 import urllib.request
 import xml.etree.ElementTree as ET
 
-
 def read_url(filename):   
     xml_page = ET.parse(filename)
     return xml_page
@@ -12,8 +11,10 @@ def read_url(filename):
 def process_item(xml_page): 
     items = []
     for item in xml_page.iter('CD'):
-        items.append({"title" : item.findtext('TITLE')})
-        print('title')
+        items.append({"title" : item.find("TITLE").text})
+        print("title","-","artist","-","company","-","country","-","price","-","year")
+    for element in items:
+        print((element['title'], element['artist'], element['country'], element['price'], element['year']))
     return items
 #def read_file(filename):
   #  try:
