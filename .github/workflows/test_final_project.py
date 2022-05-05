@@ -173,6 +173,9 @@ def test_final_project_two_records():
     elif FILENAME == "plant_catalog.xml":
         text = re.sub("<COMMON>Bloodroot.+?<COMMON>Snakeroot",
             "<COMMON>Snakeroot", text, flags=re.DOTALL)
+    elif FILENAME == "cd_catalog.xml":
+        text = re.sub("<TITLE>Hide your heart.+?<TITLE>Unchain my heart",
+            "<TITLE>Unchain my heart", text, flags=re.DOTALL)
     else:
         assert False, "Unexpected filename: " + FILENAME
 
@@ -200,6 +203,17 @@ def test_final_project_two_records():
             r"2.+?(4\.32|4\.33)",
             "Expected total line to contain:\n"
                 "2 items - $4.33 average price"
+        )
+
+    elif FILENAME == "cd_catalog.xml":
+        test.check_source_code_output(
+            "Final Project",
+            "Final Project",
+            "",
+            "two records",
+            r"2.+?(9\.55)",
+            "Expected total line to contain:\n"
+                "2 items - $9.55 average price"
         )
 
     else:
@@ -279,6 +293,8 @@ def test_final_project_missing_fields():
         text = re.sub(r" +<name>French Toast<\/name>\r?\n?", "", text)
     elif FILENAME == "plant_catalog.xml":
         text = re.sub(r" +<COMMON>Columbine<\/COMMON>\r?\n?", "", text)
+    elif FILENAME == "cd_catalog.xml":
+        text = re.sub(r" +<TITLE>Greatest Hits</TITLE>\r?\n?", "", text)
     else:
         assert False, "Unexpected filename: " + FILENAME
 
@@ -306,6 +322,8 @@ def test_final_project_bad_data():
         text = text.replace("<price>$4.50</price>", "<price>x</price>")
     elif FILENAME == "plant_catalog.xml":
         text = text.replace("<PRICE>$9.37</PRICE>", "<PRICE>x</PRICE>")
+    elif FILENAME == "cd_catalog.xml":
+        text = text.replace("<PRICE>8.10</PRICE>", "<PRICE>x</PRICE>")
     else:
         assert False, "Unexpected filename: " + FILENAME
 
