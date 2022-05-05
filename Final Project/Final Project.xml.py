@@ -1,5 +1,6 @@
 # Final
 
+
 import urllib.request
 import xml.etree.ElementTree as ET
 
@@ -11,8 +12,15 @@ def read_url(filename):
 def process_item(xml_page): 
     items = []
     for item in xml_page.iter('CD'):
-        items.append({"title" : item.find("TITLE").text})
-        print("title","-","artist","-","company","-","country","-","price","-","year")
+        items.append({
+            "title" : item.find('TITLE').text,
+            "artist": item.find('ARTIST').text,
+            "country": item.find('COUNTRY').text,
+            "price": item.find('PRICE').text,
+            "year": item.find('YEAR').text
+            })
+        
+    
     for element in items:
         print((element['title'], element['artist'], element['country'], element['price'], element['year']))
     return items
