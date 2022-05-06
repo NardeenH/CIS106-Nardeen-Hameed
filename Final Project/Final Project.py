@@ -4,6 +4,7 @@
 
 import urllib.request
 import xml.etree.ElementTree as ET
+import os
 
 
 def read_url(filename):   
@@ -38,10 +39,16 @@ def calcalate_average(items):
     
 def main():  
     filename = "cd_catalog.xml"
-    xml = read_url(filename)
-    items = process_item(xml)
-    count,avr = calcalate_average(items)
-    print(("%d items, $%.2f average price.")%(count,avr))
+    if os.path.isfile(filename):
+        try:
+            xml = read_url(filename)
+            items = process_item(xml)
+            count,avr = calcalate_average(items)
+            print(("%d items, $%.2f average price.")%(count,avr))
+        except Exception as exception:
+            print(exception)
+    else:
+        print('File is missing')
 
 
 main()
