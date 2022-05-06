@@ -48,7 +48,7 @@ def main():
             xml = read_url(filename)
             items = process_item(xml)
             count, average = calcalate_average(items)
-            print((" %d items, $%.2f average price.") % (count,average))
+            print((" %d items, $%.2f average price.") % (count, average))
             print(" Prof Dave, You are the best in the west <3")
         except Exception as exception:
             print(exception)
