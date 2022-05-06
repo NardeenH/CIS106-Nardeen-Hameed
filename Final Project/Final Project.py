@@ -1,75 +1,47 @@
-# Final
+# https://www.youtube.com/watch?v=rFxXDO8-keg
+# Final Project:
+# Some help from Tim for line 30.
 
 import urllib.request
 import xml.etree.ElementTree as ET
 
+
 def read_url(filename):   
-    xml_page = ET.parse(filename)
-    return xml_page
+    xml = ET.parse(filename)
+    return xml
 
 
-def process_item(xml_page): 
+def process_item(xml): 
     items = []
-    print("Title", 'Artist', 'Country', 'Price', 'Year')
-    for item in xml_page.iter('CD'):
+    for item in xml.iter('CD'):
         items.append({
             "title" : item.find('TITLE').text,
-            "artist" : item.find('ARTIST').text,
-            "country" : item.find('COUNTRY').text,
-            "price" : item.find('PRICE').text,
-            "year" : item.find('YEAR').text
+            "artist": item.find('ARTIST').text,
+            "country": item.find('COUNTRY').text,
+            "price": item.find('PRICE').text,
+            "year": item.find('YEAR').text
             })
-    for element in items:
-        print((element['title'], element['artist'], element['country'], element['price'], element['year']))
     return items
-#def read_file(filename):
-  #  try:
-   #     page = urllib.request.urlopen(filename).read().decode()
-    #except Exception as exception:
-     #   print(str(exception) + " reading " + filename)
-      #  exit(1)
-#for line in page.split("\n"):
- #   print(line)
+
+
+def calcalate_average(items):
+    total = 0
+    count = 0
+    print("Title" + " - " + 'Artist' + " - " + 'Country' + " - " + 'Price' + " - " + 'Year')
+    for element in items:
+        print(element['title'] + " - " + element['artist'] + " - " +
+              element['country'] + " - " + element['price'] + " - " + element['year'])
+        total = total + float(element['price'])
+        count = count + 1
+    return (count, total /count)
+     
     
-
-# url = " https://www.w3schools.com/xml/cd_catalog.xml"
-# page = urllib.request.urlopen(url).read()
-# 
-
-
-
-# with open("cd_catalog.xml", "r") as file:
-#     line = file.read()
-#     print(line)
-#     
-    
-
-
-#
-    
-#  
-# with open("cd_catalog.xml", "r") as file:
-#     line = file.read()
-#     
-#     print(line)
-
-
-
-# def read_file(filename):
-#     with open(filename, 'r') as file:
-#         for line in file:
-#             print(line.strip())
-# #         line = file.readlines()
-#         return line
-# 
-#     
-#     
-#     
-def main(): 
-#     filename = "https://www.w3schools.com/xml/cd_catalog.xml"
+def main():  
     filename = "cd_catalog.xml"
     xml = read_url(filename)
-    items = process_item(xml_page)
+    items = process_item(xml)
+    count,avr = calcalate_average(items)
+    print(("%d items, $%.2f average price.")%(count,avr))
 
 
 main()
