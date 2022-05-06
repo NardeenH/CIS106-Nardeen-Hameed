@@ -16,11 +16,11 @@ def process_item(xml):
     items = []
     for item in xml.iter('CD'):
         items.append({
-            "title" : item.find('TITLE').text,
-            "artist" : item.find('ARTIST').text,
-            "country" : item.find('COUNTRY').text,
-            "price" : item.find('PRICE').text,
-            "year" : item.find('YEAR').text }) 
+            "title": item.find('TITLE').text,
+            "artist": item.find('ARTIST').text,
+            "country": item.find('COUNTRY').text,
+            "price": item.find('PRICE').text,
+            "year": item.find('YEAR').text}) 
     return items
 
 
@@ -38,7 +38,7 @@ def calcalate_average(items):
               element['year'])
         total = total + float(element['price'])
         count = count + 1
-    return (count, total /count)
+    return (count, total / count)
      
     
 def main():  
