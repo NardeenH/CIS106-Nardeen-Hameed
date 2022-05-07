@@ -1,8 +1,10 @@
 # https://www.youtube.com/watch?v=rFxXDO8-keg
 # Final Project:
 # Some help from Tim.
-
+# https://thepythonguru.com/python-string-formatting/
 # import urllib.request
+
+
 import xml.etree.ElementTree as ET
 import os
 
@@ -29,7 +31,7 @@ def calcalate_average(items):
     count = 0
     print("Title" + " - " + 'Artist' +
           " - " + 'Country' + " - " +
-          'Price' + " - " + 'Year')
+          'Price' + " - " + 'Year', sep = '\n')
     for element in items:
         print(element['title'] + " - " +
               element['artist'] + " - " +
@@ -49,7 +51,6 @@ def main():
             items = process_item(xml)
             count, average = calcalate_average(items)
             print((" %d items, $%.2f average price.") % (count, average))
-            print(" Prof Dave, You are the best in the west <3")
         except Exception as exception:
             print(exception)
     else:
