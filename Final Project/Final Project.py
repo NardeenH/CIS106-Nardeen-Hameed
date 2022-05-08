@@ -35,13 +35,13 @@ def calcalate_average(items):
     YELLOW = '\033[33m'
     BLUE = '\033[34m'
     MAGENTA = '\033[35m'
-    print("%-0s %-s %-0s %-s %-0s %-s %-0s %-s %-0s" %
-          (GREEN + "Title", " - ", RED + 'Artist',
-           " - ", YELLOW + 'Country',
-           " - ", BLUE + 'Price', " - ", MAGENTA + 'Year'))
+#     print("%-0s %-s %-0s %-s %-0s %-s %-0s %-s %-0s" %
+#           (GREEN + "Title", " - ", RED + 'Artist',
+#            " - ", YELLOW + 'Country',
+#            " - ", BLUE + 'Price', " - ", MAGENTA + 'Year'))
     for element in items:
-        print("%-0s %-s %-0s %-s %-0s %-s %-0s %-s %-0s" %(
-            GREEN + element['title'],  " - ",
+        print("%-0s %-s %-0s %-s %-0s %-s %-0s %-s %-0s" % (
+            GREEN + element['title'], " - ",
               RED + element['artist'], " - ",
               YELLOW + element['country'], " - ", 
               BLUE + element['price'], " - ",
@@ -63,9 +63,9 @@ def main():
             items = process_item(xml)
             count, average = calcalate_average(items)
             print((bold + " %d items, $%.2f average price.") % (count, average))
-            print("__________________________________________________________________________________________________________________________")
-            print(RED + "                              Professor DDDDave,YOU ARE THE BEST IN THE WEST!")
-            print(YELLOW + "                                               THANK YOU")
+            print("__________________________________________")
+            print(RED + "Professor DDDDave,YOU ARE THE BEST IN THE WEST!")
+            print(YELLOW + "              THANK YOU")
         except Exception as exception:
             print(exception)
     else:
