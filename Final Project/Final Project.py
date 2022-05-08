@@ -52,7 +52,6 @@ def calcalate_average(items):
      
     
 def main():
-    CYAN = '\033[36m'
     RED = '\033[31m'
     YELLOW = '\033[33m'
     bold = '\033[1m'
@@ -62,7 +61,8 @@ def main():
             xml = read_url(filename)
             items = process_item(xml)
             count, average = calcalate_average(items)
-            print((bold + " %d items, $%.2f average price.") % (count, average))
+            print((bold + " %d items, $%.2f average price.")
+                  % (count, average))
             print("__________________________________________")
             print(RED + "Professor DDDDave,YOU ARE THE BEST IN THE WEST!")
             print(YELLOW + "              THANK YOU")
