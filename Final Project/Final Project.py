@@ -3,6 +3,7 @@
 # Some help from Tim.
 # https://thepythonguru.com/python-string-formatting/
 # import urllib.request
+# https://thepythonguru.com/python-string-formatting/
 
 
 import xml.etree.ElementTree as ET
@@ -35,8 +36,6 @@ def calcalate_average(items):
     YELLOW = '\033[33m'
     BLUE = '\033[34m'
     MAGENTA = '\033[35m'
-
-    
     for element in items:
         print("%-0s %-s %-0s %-s %-0s %-s %-0s %-s %-0s" % (
             GREEN + element['title'], " - ",
