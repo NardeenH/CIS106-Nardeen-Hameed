@@ -29,28 +29,40 @@ def process_item(xml):
 def calcalate_average(items):
     total = 0
     count = 0
-    print("Title" + " - " + 'Artist' +
-          " - " + 'Country' + " - " +
-          'Price' + " - " + 'Year', sep = '\n')
+    os.system("")
+    RED = '\033[31m'
+    GREEN = '\033[32m'
+    YELLOW = '\033[33m'
+    BLUE = '\033[34m'
+    MAGENTA = '\033[35m'
+    print("%-30s %-30s %-30s %-30s %-30s" %(GREEN +"Title", RED +'Artist', YELLOW +'Country',
+          BLUE +'Price', MAGENTA +'Year'))
     for element in items:
-        print(element['title'] + " - " +
-              element['artist'] + " - " +
-              element['country'] + " - " +
-              element['price'] + " - " +
-              element['year'])
+        print("%-30s %-30s %-30s %-30s %-30s" %(GREEN +element['title'],
+              RED +element['artist'], 
+              YELLOW +element['country'], 
+              BLUE +element['price'],
+              MAGENTA +element['year']))
         total = total + float(element['price'])
         count = count + 1
     return (count, total / count)
      
     
-def main():  
+def main():
+    CYAN = '\033[36m'
+    RED = '\033[31m'
+    YELLOW = '\033[33m'
+    bold = '\033[1m'
     filename = "cd_catalog.xml"
     if os.path.isfile(filename):
         try:
             xml = read_url(filename)
             items = process_item(xml)
             count, average = calcalate_average(items)
-            print((" %d items, $%.2f average price.") % (count, average))
+            print((bold +" %d items, $%.2f average price.") % ( +count, average))
+            print("__________________________________________________________________________________________________________________________")
+            print(RED +"                              Professor Dave,YOU ARE THE BEST IN THE WEST!")
+            print(YELLOW +"                                               THANK YOU")
         except Exception as exception:
             print(exception)
     else:
