@@ -35,14 +35,17 @@ def calcalate_average(items):
     YELLOW = '\033[33m'
     BLUE = '\033[34m'
     MAGENTA = '\033[35m'
-    print("%-30s %-30s %-30s %-30s %-30s" %(GREEN +"Title", RED +'Artist', YELLOW +'Country',
-          BLUE +'Price', MAGENTA +'Year'))
+    print("%-30s %-s %-30s %-s %-30s %-s %-30s %-s %-30s" %
+          (GREEN + "Title", " - ", RED + 'Artist',
+           " - ", YELLOW + 'Country',
+           " - ", BLUE + 'Price', " - ", MAGENTA + 'Year'))
     for element in items:
-        print("%-30s %-30s %-30s %-30s %-30s" %(GREEN +element['title'],
-              RED +element['artist'], 
-              YELLOW +element['country'], 
-              BLUE +element['price'],
-              MAGENTA +element['year']))
+        print("%-30s %-s %-30s %-s %-30s %-s %-30s %-s %-30s" %(
+            GREEN + element['title'],  " - ",
+              RED + element['artist'], " - ",
+              YELLOW + element['country'], " - ", 
+              BLUE + element['price'], " - ",
+              MAGENTA + element['year']))
         total = total + float(element['price'])
         count = count + 1
     return (count, total / count)
@@ -59,10 +62,10 @@ def main():
             xml = read_url(filename)
             items = process_item(xml)
             count, average = calcalate_average(items)
-            print((bold +" %d items, $%.2f average price.") % ( +count, average))
+            print((bold + " %d items, $%.2f average price.") % (count, average))
             print("__________________________________________________________________________________________________________________________")
-            print(RED +"                              Professor Dave,YOU ARE THE BEST IN THE WEST!")
-            print(YELLOW +"                                               THANK YOU")
+            print(RED + "                              Professor DDDDave,YOU ARE THE BEST IN THE WEST!")
+            print(YELLOW + "                                               THANK YOU")
         except Exception as exception:
             print(exception)
     else:
