@@ -35,10 +35,8 @@ def calcalate_average(items):
     YELLOW = '\033[33m'
     BLUE = '\033[34m'
     MAGENTA = '\033[35m'
-#     print("%-0s %-s %-0s %-s %-0s %-s %-0s %-s %-0s" %
-#           (GREEN + "Title", " - ", RED + 'Artist',
-#            " - ", YELLOW + 'Country',
-#            " - ", BLUE + 'Price', " - ", MAGENTA + 'Year'))
+
+    
     for element in items:
         print("%-0s %-s %-0s %-s %-0s %-s %-0s %-s %-0s" % (
             GREEN + element['title'], " - ",
