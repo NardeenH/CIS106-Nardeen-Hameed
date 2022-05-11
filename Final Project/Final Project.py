@@ -3,46 +3,53 @@
 # Some help from Tim.
 # https://thepythonguru.com/python-string-formatting/
 # import urllib.request
-# https://www.youtube.com/watch?v=rFxXDO8-keg
-# Final Project:
-# Some help from Tim.
-# https://thepythonguru.com/python-string-formatting/
-# import urllib.request
 
 
 import xml.etree.ElementTree as ET
 import os
 
 
-def read_file(filename):   
+def read_url(filename):   
+    xml = ET.parse(filename)
+    return xml
+
+
+def process_item(xml): 
     items = []
-    with open(filename, 'r') as file:
-        for line in file:
-            if line.find("TITLE") ==-1:
-                continue
-            line = line.replace("<TITLE>","")
-            line = line.replace("</TITLE>\n","")
-            line = line.replace(" ","")
-            
-            items.append(line)
-           
-            
-    print(items)              
+    title = []
+    artist = []
+    country = []
+    price = []
+    year = []
+    for item in xml.iter('CD'):
+        title.append(item.find('TITLE').text)
+        artist.append(item.find('ARTIST').text)
+        country.append(item.find('COUNTRY').text)
+        price.append(item.find('PRICE').text)
+        year.append(item.find('YEAR').text)
+    items.append(title)
+    items.append(artist)
+    items.append(country)
+    items.append(price)
+    items.append(year)    
     return items
 
 
 def calcalate_average(items):
     total = 0
     count = 0
-
-#     print("%-5s %-5s %-5s %-5s %-5s" %("Title",'Artist','Country','Price','Year'))
-    for element in items:
-        print("%-30s %-30s %-30s %-30s %-30s" %(element['title'],
-              element['artist'], 
-              element['country'], 
-              element['price'],
-              element['year']))
-        total = total + float(element['price'])
+#     print("%-0s %-s %-0s %-s %-0s %-s %-0s %-s %-0s" %
+#           (GREEN + "Title", " - ", RED + 'Artist',
+#            " - ", YELLOW + 'Country',
+#            " - ", BLUE + 'Price', " - ", MAGENTA + 'Year'))
+    for index in range(len(items[0])):
+        print("%-0s %-s %-0s %-s %-0s %-s %-0s %-s %-0s" % (
+              items[0][index], " - ",
+              items[1][index], " - ",
+              items[2][index], " - ", 
+              items[3][index], " - ",
+              items[4][index]))
+        total = total + float(items[3][index])
         count = count + 1
     return (count, total / count)
      
@@ -51,9 +58,11 @@ def main():
     filename = "cd_catalog.xml"
     if os.path.isfile(filename):
         try:
-            items = read_file(filename)
+            xml = read_url(filename)
+            items = process_item(xml)
             count, average = calcalate_average(items)
-            print((" %d items, $%.2f average price.") % (count, average))
+            print((" %d items, $%.2f average price.")
+                  % (count, average))
         except Exception as exception:
             print(exception)
     else:
