@@ -38,10 +38,17 @@ def process_item(xml):
 def calcalate_average(items):
     total = 0
     count = 0
-#     print("%-0s %-s %-0s %-s %-0s %-s %-0s %-s %-0s" %
-#           (GREEN + "Title", " - ", RED + 'Artist',
-#            " - ", YELLOW + 'Country',
-#            " - ", BLUE + 'Price', " - ", MAGENTA + 'Year'))
+    for index in range(len(items[0])):
+        total = total + float(items[3][index])
+        count = count + 1
+    return (count, total / count)
+
+
+def display_output(items):
+    print("%-0s %-s %-0s %-s %-0s %-s %-0s %-s %-0s" %
+          ("Title", " - ", 'Artist',
+           " - ", 'Country',
+           " - ", 'Price', " - ", 'Year'))
     for index in range(len(items[0])):
         print("%-0s %-s %-0s %-s %-0s %-s %-0s %-s %-0s" % (
               items[0][index], " - ",
@@ -49,10 +56,7 @@ def calcalate_average(items):
               items[2][index], " - ", 
               items[3][index], " - ",
               items[4][index]))
-        total = total + float(items[3][index])
-        count = count + 1
-    return (count, total / count)
-     
+    
     
 def main():
     filename = "cd_catalog.xml"
@@ -61,8 +65,12 @@ def main():
             xml = read_url(filename)
             items = process_item(xml)
             count, average = calcalate_average(items)
+            display_output(items)
             print((" %d items, $%.2f average price.")
                   % (count, average))
+            print('\x1b[1;32;40m'
+                  + 'Professor Dave, You are the best prof I have ever met!'
+                  + '\x1b[0m')
         except Exception as exception:
             print(exception)
     else:
