@@ -68,9 +68,9 @@ def main():
             display_output(items)
             print((" %d items, $%.2f average price.")
                   % (count, average))
-            print('\x1b[1;32;40m'
-                  + 'Professor Dave, You are the best prof I have ever met!'
-                  + '\x1b[0m')
+            print('\x1b[1;32;40m' +
+                  'Professor Dave, You are the best prof I have ever met!' +
+                  '\x1b[0m')
         except Exception as exception:
             print(exception)
     else:
